@@ -36,3 +36,55 @@
     transform: rotate(360deg);
   }
 }
+
+main {
+  
+  margin: 5vh auto;
+  background-color: rgb(224, 224, 224);
+  width: 80vw;
+  height: 90vh;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;   
+  height: 91%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#vertmenu {
+  grid-column: 1 / span 1;
+  margin: 10px;
+}
+
+.map {
+  grid-column: 2 / span 1;
+  width: auto;
+  border: rgb(221, 219, 219) 1px solid;
+  text-align: center;
+  margin: 10px;
+  border-radius: 4px;
+}
+
+.hello {
+  padding-top: 30%;
+}
+
+.data {
+  grid-column: 3 / span 1;
+  width: auto;
+  border: rgb(221, 219, 219) 1px solid;
+  margin: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.covid {
+  padding-top: 90%;
+}
+
