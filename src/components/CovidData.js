@@ -1,9 +1,6 @@
 import React from "react";
 import "../App.css";
-
-let Data = `{
-  info: [{ deaths: "11" }, { cases: "13" }, { recovered: "2" }],
-}`;
+import Data from "./subs/fakedata";
 
 console.log(Data.info);
 
@@ -14,7 +11,7 @@ function CovidData() {
       <div class="data">
         <p> This right hre is one chunk of info </p>
 
-        <p> this right here is another </p>
+        <p>hi</p>
       </div>
     </div>
   );
