@@ -4,8 +4,8 @@ import '../App.css';
 function CovidData() {
 
 return (
-    <div class="data">
-    <h2 class="covid">Covid Data Here</h2>
+    <div className="data">
+    <h2 className="covid">Covid Data Here</h2>
     </div>    
 )
 }
