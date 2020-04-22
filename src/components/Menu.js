@@ -4,29 +4,29 @@ import '../App.css';
 function Menu() {
     
     return (
-        <div class="ui menu">
-        <div class="header item">
+        <div className="ui menu">
+        <div className="header item">
           Home
         </div>
-        <a class="item">
+        <a className="item">
           News
         </a>
-        <a class="item">
+        <a className="item">
           Trends
         </a>
-        <a class="item">
+        <a className="item">
           Things To Do
         </a>
-        <div class="item">
-          <div class="ui icon input">
+        <div className="item">
+          <div className="ui icon input">
             <input type="text" placeholder="Search..."/>
-            <i class="search icon"></i>
+            <i className="search icon"></i>
           </div>
         </div>
-        <div class="right item">
-          <div class="ui action input">
+        <div className="right item">
+          <div className="ui action input">
             <input type="text" placeholder="Navigate to..."/>
-            <div class="ui button">Go</div>
+            <div className="ui button">Go</div>
           </div>
         </div>
       </div>
