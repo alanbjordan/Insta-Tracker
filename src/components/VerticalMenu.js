@@ -9,10 +9,10 @@ function VerticalMenu() {
         <div className="item">
           <div className="header">COVID-19 Data</div>
           <div className="menu">
-            <a href='#' className="item">Global</a>
-            <a href='#' className="item">Country</a>
-            <a href='#' className="item">State</a>
-            <a href='#' className="item">Local</a>
+            <a href="#" className="item">Global</a>
+            <a href="#" className="item">Country</a>
+            <a href="#" className="item">State</a>
+            <a href="#" className="item">Local</a>
           </div>
         </div>
         <div className="item">

@@ -8,13 +8,13 @@ function Menu() {
         <div className="header item">
           Home
         </div>
-        <a href='#' className="item">
+        <a href="#" className="item">
           News
         </a>
-        <a href='#' className="item">
+        <a href="#" className="item">
           Trends
         </a>
-        <a href='#' className="item">
+        <a href="#" className="item">
           Things To Do
         </a>
         <div className="item">
