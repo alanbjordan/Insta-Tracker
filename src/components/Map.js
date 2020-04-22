@@ -1,17 +1,23 @@
 
-import React from 'react';
-import Iframe from 'react-iframe'
-import '../App.css';
+import React, { Component } from 'react';
+import GoogleMapReact from 'google-map-react';
 
-function Map() {
-
-return (
-    <div>
-        <Iframe width="300" height="225" frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLaD66tR09YgRhBoLv9TPoTI&key=AIzaSyCF6-Gp5GftHubZ6danNcSYQATv47ZtDS0" allowfullscreen></Iframe>
-    </div>  
-)
-
-}
+class Map extends Component {
+    state  = {
+      center: {lat: 59.95, lng: 30.33},
+      zoom: 11
+    };
+  
+    render() {
+      return (
+         <GoogleMapReact
+          defaultCenter={this.state.center}
+          defaultZoom={this.state.zoom}
+        >
+        </GoogleMapReact>
+      );
+    }
+  }
+  
 
 export default Map;
