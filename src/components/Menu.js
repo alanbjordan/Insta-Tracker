@@ -8,6 +8,7 @@ function Menu() {
         <div className="header item">
           Home
         </div>
+<<<<<<< HEAD
         <a href='#' className="item">
           News
         </a>
@@ -15,6 +16,15 @@ function Menu() {
           Trends
         </a>
         <a href='#' className="item">
+=======
+        <a href="#" className="item">
+          News
+        </a>
+        <a href="#" className="item">
+          Trends
+        </a>
+        <a href="#" className="item">
+>>>>>>> bb72d71023bd6829aa109ab088c1feb0312de22e
           Things To Do
         </a>
         <div className="item">
