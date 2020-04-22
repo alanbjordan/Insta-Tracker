@@ -5,16 +5,20 @@ import CovidData from './components/CovidData';
 import './App.css';
 import VerticalMenu from './components/VerticalMenu';
 import Menu from './components/Menu';
+import News from './components/News';
 
 function App() {
   return (
     <div className="App">
       <main>
         <Menu />
-        <div class="wrapper">
+        <div className="wrapper">
             <VerticalMenu />
             <Map />
             <CovidData />
+            <>
+              <News />
+            </>
         </div>
       </main>
     </div>
