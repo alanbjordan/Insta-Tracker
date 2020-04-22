@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import './Component.css';
 
 class News extends Component {
   constructor(props) {
@@ -27,7 +28,6 @@ class News extends Component {
   render() {
     return (
       <div className='news'>
-        <div>
           {this.state.articles.map((item, index) => {
             return (
               <div className='container' key={index}>
@@ -40,7 +40,6 @@ class News extends Component {
               </div>
             );
           })}
-        </div>
         ;
       </div>
     );
