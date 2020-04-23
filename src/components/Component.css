@@ -1,3 +1,51 @@
 .news {
     overflow-y: scroll;
 }
+
+#vertmenu {
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / span 1;
+}
+
+.news {
+    /* margin: 10px; */
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    text-align: center;
+    height: 100%;
+    width: auto;
+    border: rgb(221, 219, 219) 1px solid;
+}
+
+.newsPlaceholder {
+    padding-top: 3%;
+    font-size: 60px;
+}
+
+.map {
+    grid-column: 2 / span 1;
+    width: auto;
+    border: rgb(221, 219, 219) 1px solid;
+    text-align: center;
+    /* margin: 10px; */
+    border-radius: 4px;
+  }
+  
+  .hello {
+    padding-top: 30%;
+  }
+  
+  .data {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 2;
+    width: auto;
+    border: rgb(221, 219, 219) 1px solid;
+    /* margin: 10px; */
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .covid {
+    padding-top: 90%;
+  }
