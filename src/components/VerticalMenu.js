@@ -18,7 +18,10 @@ function VerticalMenu() {
           </button>
         </div>
       </div>
-      <div className="section head"> Food Banks </div>
+      <div className="section head">
+        {" "}
+        <h3>Food Banks</h3>{" "}
+      </div>
       <div className="ui checkbox">
         <input type="checkbox" name="example" />
         <label>Churches</label>
@@ -27,12 +30,18 @@ function VerticalMenu() {
         <input type="checkbox" name="example" />
         <label>Private</label>
       </div>
-      <div className="section head"> Grocery </div>
+      <div className="section head">
+        {" "}
+        <h3>Grocery</h3>{" "}
+      </div>
       <div className="ui checkbox">
         <input type="checkbox" name="example" />
         <label>Grocery</label>
       </div>
-      <div className="section head"> Medical</div>
+      <div className="section head">
+        {" "}
+        <h3>Medical</h3>
+      </div>
       <div className="ui checkbox">
         <input type="checkbox" name="example" />
         <label>Pharmacy </label>
