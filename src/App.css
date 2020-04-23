@@ -1,71 +1,31 @@
 .App {
   text-align: center;
+  background-color: rgb(171, 171, 171);
 }
 
 main {
-  margin: 5vh auto;
-  background-color: rgb(224, 224, 224);
-  width: 80vw;
-  height: 90vh;
-  border-radius: 20px;
-  padding: 15px;
+  margin: auto auto;
+  /* background-color: rgb(224, 224, 224); */
+  width: 100vw;
+  height: 100vh;
+  border-radius: 5px;
+  padding: 5px;
+  
 }
 
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 5fr 2fr;
   grid-template-rows: 3fr 1fr;
+  grid-column-gap: 5px;
   background-color: rgb(255, 255, 255);
-  margin: 0 auto;   
-  height: 91%;
+  /* margin: 0 auto;    */
+  height: 94%;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
-#vertmenu {
-  grid-column: 1 / span 1;
-  margin: 10px;
-}
 
-.map {
-  grid-column: 2 / span 1;
-  width: auto;
-  border: rgb(221, 219, 219) 1px solid;
-  text-align: center;
-  margin: 10px;
-  border-radius: 4px;
-}
-
-.hello {
-  padding-top: 30%;
-}
-
-.data {
-  grid-column: 3 / span 1;
-  width: auto;
-  border: rgb(221, 219, 219) 1px solid;
-  margin: 10px;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.covid {
-  padding-top: 90%;
-}
-
-.news {
-  margin: 10px;
-  grid-column: 1 / span 3;
-  text-align: center;
-  height: 80%;
-  width: auto;
-  border: rgb(221, 219, 219) 1px solid;
-}
-
-.newsPlaceholder {
-  padding-top: 3%;
-  font-size: 60px;
-}
 
 /* Map CSS */
 #map {
