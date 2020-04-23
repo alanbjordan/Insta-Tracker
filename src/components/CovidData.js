@@ -6,9 +6,9 @@ console.log(Data.info);
 
 function CovidData() {
   return (
-    <div class="datacomp">
-      <h2 class="covid">Covid Data Here</h2>
-      <div class="data">
+    <div className="datacomp">
+      <h2 className="covid">Covid Data Here</h2>
+      <div className="data">
         <p> This right hre is one chunk of info </p>
 
         <p>hi</p>
