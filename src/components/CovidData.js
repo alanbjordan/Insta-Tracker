@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../App.css';
+import './Component.css';
 
 class CovidData extends Component {
     state = {
@@ -22,16 +23,25 @@ class CovidData extends Component {
         const { currentState } = this.state;
         const url = `https://corona.lmao.ninja/v2/states/${currentState}?yesterday=false`
         const stateData = await this.loadData(url);
-
         this.setState({
             stateData
         })
     }
 
+
+
     render() {
         const { stateData } = this.state;
         return (
             <div className="data">
+                        <div className="item">
+          <div className="header">COVID-19 Data</div>
+          <div className="menu">
+            <button className="item" className="dataButton">Global</button>
+            <button className="item" className="dataButton">Country</button>
+            <button className="item" className="dataButton">State</button>
+          </div>
+        </div>
                 <h5>State: {stateData.state}</h5>
                 <h5>Active Cases: {stateData.active}</h5>
                 <h5>Total Cases: {stateData.cases}</h5>
