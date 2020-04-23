@@ -2,13 +2,15 @@
 import React from 'react';
 import Iframe from 'react-iframe'
 import '../App.css';
+import './Component.css';
 
 function Map() {
 
 return (
     <div>
-        <Iframe width="98%" height="98%" frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJLaD66tR09YgRhBoLv9TPoTI&key=AIzaSyCF6-Gp5GftHubZ6danNcSYQATv47ZtDS0" allowfullscreen></Iframe>
+
+    
+    <Iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://studio.here.com/viewer/?project_id=74445c55-ad75-45a7-8c52-0fb67c915aca" owfullscreen frameborder="0"></Iframe>
     </div>  
 )
 
