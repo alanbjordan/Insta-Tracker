@@ -16,7 +16,7 @@ function App() {
             <Map
               // google={this.props.google}
               center={{ lat: 33.749, lng: -84.388 }}
-              height={parseFloat("300px")}
+              height={"300px"}
               zoom={15}
             />
             <CovidData />
