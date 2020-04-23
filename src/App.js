@@ -1,5 +1,4 @@
 import React from 'react';
-// import logo from './logo.svg';
 import Map from './components/Map';
 import CovidData from './components/CovidData';
 import './App.css';
@@ -14,7 +13,12 @@ function App() {
         <Menu />
         <div className="wrapper">
             <VerticalMenu />
-            <Map />
+            <Map
+              // google={this.props}
+              center={{ lat: 33.749, lng: -84.388 }}
+              height={parseFloat("300px")}
+              zoom={15}
+            />
             <CovidData />
             <>
               <News />
