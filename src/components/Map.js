@@ -155,8 +155,6 @@ class Map extends Component {
     geocodeByAddress(description)
       .then(results => getLatLng(results[0]))
       .then(({ lat, lng }) => {
-        let aLat = ({ lat });
-        let aLng = ({ lng });
         this.setState({
           address: description,
           markerPosition: {
