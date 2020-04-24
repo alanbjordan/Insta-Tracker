@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Accordion from 'react-bootstrap/Accordion';
+import Card from 'react-bootstrap/Card';
 
 class Exercise extends Component {
     state = {
@@ -100,7 +102,17 @@ class Exercise extends Component {
                 <br></br>
                     <div>
                         {exercises.map(exercise => (
-                            <p id={exercise.name} key={exercise.id} value={exercise.id}>{exercise.name}</p>
+                            // <p id={exercise.name} key={exercise.id} value={exercise.id} > {exercise.name} </p>
+                            <Accordion>
+                                <Card key={exercise.id}>
+                                    <Accordion.Toggle as={Card.Header} eventKey="0">
+                                        {exercise.name}
+                                    </Accordion.Toggle>
+                                    <Accordion.Collapse eventKey="0">
+                                    <Card.Body>{exercise.description}</Card.Body>
+                                    </Accordion.Collapse>
+                                </Card>
+                            </Accordion>
                         ))}
                     </div>
                 </div>
