@@ -27,7 +27,7 @@ class Exercise extends Component {
 
     handleMuscleChange = event => {
         this.setState({
-            musclesId: event.target.id,
+            musclesId: event.target.tabIndex,
           selectMuscle: event.target.value,
         })
         console.log(this.state.musclesId)
@@ -35,7 +35,7 @@ class Exercise extends Component {
 
     handleEquipChange = event => {
         this.setState({
-            equipmentId: event.target.id,
+            equipmentId: event.target.tabIndex,
           selectEquipment: event.target.value
         })
         console.log(this.state.selectEquipment)
@@ -77,7 +77,7 @@ class Exercise extends Component {
                         <label id="muscleSelectLabel">SELECT A MUSCLE:
                             <select onChange={this.handleMuscleChange} id="muscleChangeForm">
                                 {muscles.map(muscle => (
-                                    <option id={parseInt(muscle.id)} key={muscle.id} value={muscle.name}>{muscle.name}</option>
+                                    <option tabIndex={muscle.id} key={muscle.id} value={muscle.name}>{muscle.name}</option>
                                 ))}
                             </select>
                         </label>
@@ -87,7 +87,7 @@ class Exercise extends Component {
                         <label id="equipmentSelectLabel">SELECT A PIECE OF EQUIPMENT:
                             <select onChange={this.handleEquipChange} id="equipmentChangeForm">
                                 {equipment.map(stuff => (
-                                    <option id={stuff.id} key={stuff.id} value={stuff.name}>{stuff.name}</option>
+                                    <option tabIndex={stuff.id} key={stuff.id} value={stuff.name}>{stuff.name}</option>
                                 ))}
                             </select>
                         </label>
