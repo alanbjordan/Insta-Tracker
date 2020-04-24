@@ -33,7 +33,7 @@ class News extends Component {
               <div className='container' key={index}>
                 <h5 className='text'>{item.title}</h5>
 
-                <a href={item.url} target='_blank'>
+                <a href={item.url} rel="noopener noreferrer" target='_blank'>
                   Read More
                 </a>
                 <p className='text'>{item.content}</p>
