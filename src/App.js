@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import Map from './components/Map';
 import CovidData from './components/CovidData';
 import './App.css';
 import VerticalMenu from './components/VerticalMenu';
 import Menu from './components/Menu';
 import News from './components/News';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Exercise from './components/exercise';
 
 function App() {
