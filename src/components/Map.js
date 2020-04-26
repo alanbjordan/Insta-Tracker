@@ -10,7 +10,7 @@ return (
     <div>
 
     
-    <Iframe width="100%" height="100%" frameborder="0" style={{border:"0"}} src="https://studio.here.com/viewer/?project_id=74445c55-ad75-45a7-8c52-0fb67c915aca" owfullscreen ></Iframe>
+   <iframe src="https://studio.here.com/viewer/?project_id=e8bdb0c7-f853-4840-968d-d4f57547c09a" frameborder="0"></iframe>
     </div>  
 )
 
