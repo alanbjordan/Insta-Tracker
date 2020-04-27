@@ -103,8 +103,8 @@ class Exercise extends Component {
                     <div>
                         {exercises.map(exercise => (
                             // <p id={exercise.name} key={exercise.id} value={exercise.id} > {exercise.name} </p>
-                            <Accordion>
-                                <Card key={exercise.id}>
+                            <Accordion key={exercise.id}>
+                                <Card>
                                     <Accordion.Toggle as={Card.Header} eventKey="0">
                                         {exercise.name}
                                     </Accordion.Toggle>

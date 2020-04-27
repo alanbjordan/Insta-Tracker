@@ -107,3 +107,39 @@ html, body {
 #target {
   width: 345px;
 }
+
+.youtube {
+  margin: 0 auto;
+}
+
+/* .cdcButton {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #e74c3c;
+  border-top-left-radius: 25%;
+  border-bottom-left-radius: 25%;
+  margin-right: 33.3%;
+} */
+
+.btn-outline-danger {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  margin-right: 0.5%;
+  padding-left: 25px;
+}
+
+#whoButton {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-top-left-radius: 0%;
+  border-bottom-left-radius: 0%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  margin-left: 0.5%;
+  padding-left: 25px;
+}

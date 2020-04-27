@@ -6,7 +6,8 @@ import VerticalMenu from './components/VerticalMenu';
 import Menu from './components/Menu';
 import News from './components/News';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import Exercise from './components/exercise';
+import Exercise from './components/Exercise';
+import Youtube from './components/Youtube';
 
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
                 </>
                 <Route path="/exercises" component={Exercise} />
             </div>
+            <Route path="/" component={Youtube} />
+
           </main>
         </Switch>
       </Router>
