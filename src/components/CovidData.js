@@ -4,8 +4,12 @@ import './Component.css';
 
 class CovidData extends Component {
     state = {
-        currentState: "Georgia",
-        stateData: []
+        update: false,
+        options: [],
+        data: [],
+        stateData: [],
+        countryData: [],
+        theState: ["AK"],
     }
 
     loadData = async (url) => {
@@ -19,34 +23,72 @@ class CovidData extends Component {
         }
     }
 
+    //CountryData
+    getCountryData = async () => {
+        const url = `https://covidtracking.com/api/v1/us/current.json`
+        const countryData = await this.loadData(url);
+        console.log("countryData =>", countryData[0]);
+        return this.setState({
+            data: countryData[0]
+        })
+    }
+    
+    handleCountryChange = () => {
+        this.setState({
+            data: this.getCountryData()
+        })
+    }
+
+    //StateData
+    getStateData = async () => {
+        const url = `https://covidtracking.com/api/v1/states/${this.state.theState}/daily.json`
+        const stateData = await this.loadData(url);
+        return this.setState({
+            data: stateData[0]
+        })
+    }
+
+   //StateData
+    handleStateChange = async (event) => {
+        this.setState({
+            update: true,
+            data: this.getStateData()
+        }, this.handleChange(event));
+    }
+
     async componentDidMount() {
-        const { currentState } = this.state;
-        const url = `https://corona.lmao.ninja/v2/states/${currentState}?yesterday=false`
+        const url = `https://covidtracking.com/api/v1/states/current.json`
         const stateData = await this.loadData(url);
         this.setState({
             stateData
         })
+        this.getCountryData();
     }
 
-
+    handleChange = async (event) => {        
+        this.setState({
+            theState: event.target.value,
+        }, this.getStateData);
+    }
 
     render() {
-        const { stateData } = this.state;
+        const { data, stateData} = this.state;
+
         return (
             <div className="data">
-                        <div className="item">
-          <div className="header">COVID-19 Data</div>
-          <div className="menu">
-            <button className="item" className="dataButton">Global</button>
-            <button className="item" className="dataButton">Country</button>
-            <button className="item" className="dataButton">State</button>
-          </div>
-        </div>
-                <h5>State: {stateData.state}</h5>
-                <h5>Active Cases: {stateData.active}</h5>
-                <h5>Total Cases: {stateData.cases}</h5>
-                <h5>New Cases Today: {stateData.todayCases}</h5>
-                <h5>Today's Death Count: {stateData.todayDeaths}</h5>
+                <button onClick={this.handleCountryChange} id='usButton'>See U.S. Totals</button>
+                <h3>or</h3>
+                <h2>Select a State</h2>
+                <form  value={this.state.theState} onChange={this.handleChange}>
+                    <label>State:
+                    <select>
+                        {stateData.map((state) => <option key={state.state} value={state.state}>{state.state}</option>)}
+                    </select> 
+                    </label> 
+                </form  >
+                <h5>Positive Test: {data.positive}</h5>
+                <h5>Total Deaths: {data.death}</h5>
+                <h5>Total Cases: {data.total}</h5>
             </div>
         )
     }

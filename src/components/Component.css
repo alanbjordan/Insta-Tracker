@@ -49,3 +49,13 @@
   .covid {
     padding-top: 90%;
   }
+
+  #usButton {
+    width: 50%;
+    height: 5%;
+    margin-top: 5%;
+    background-color: red;
+    color: white;
+    font-size: 2em;
+    border-radius: 10px;
+  }
