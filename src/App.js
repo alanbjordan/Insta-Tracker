@@ -29,7 +29,7 @@ function App() {
         <Route path="/" component={Menu} />
       </div>
           <div className="wrapper">
-              <Route exact path="/" component={VerticalMenu}/>
+              <Route exact path="/" component={VerticalMenu} />
               <Route exact path="/" component={Map} />
               <Route exact path="/" component={CovidData} />
               <>
