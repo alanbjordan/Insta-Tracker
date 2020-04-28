@@ -8,6 +8,7 @@ import News from './components/News';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Exercise from './components/Exercise';
 import Youtube from './components/Youtube';
+import Twitter from './components/Twitter';
 
 function App() {
   return (
@@ -39,7 +40,8 @@ function App() {
                 </>
                 <Route path="/exercises" component={Exercise} />
             </div>
-            <Route path="/" component={Youtube} />
+            <Route exact path="/" component={Youtube} />
+            <Route exact path="/" component={Twitter} />
 
           </main>
         </Switch>

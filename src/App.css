@@ -143,3 +143,8 @@ html, body {
   margin-left: 0.5%;
   padding-left: 25px;
 }
+
+.cdcTweets {
+  width: 400px;
+  margin: 0 auto;
+}

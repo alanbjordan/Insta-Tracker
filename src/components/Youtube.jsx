@@ -4,8 +4,9 @@ const API = 'AIzaSyCF6-Gp5GftHubZ6danNcSYQATv47ZtDS0'
 const playlistId = 'PLvrp9iOILTQaJa78zFQ0QgvShQ2HEwHxP'
 const maxResults = 10;
 const whoChannelId = 'UC07-dOwgza1IguKA86jqxNA'
-
+// CDC Playlist URL:
 // https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=10&playlistId=PLvrp9iOILTQaJa78zFQ0QgvShQ2HEwHxP&key=AIzaSyCF6-Gp5GftHubZ6danNcSYQATv47ZtDS0
+// WHO Playlist URL:
 // https://www.googleapis.com/youtube/v3/search?key=AIzaSyCF6-Gp5GftHubZ6danNcSYQATv47ZtDS0&channelId=UC07-dOwgza1IguKA86jqxNA&part=snippet,id&order=date&maxResults=5
 
 const cdcURL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=${maxResults}&playlistId=${playlistId}&key=${API}`
