@@ -1,61 +1,20 @@
 import React from 'react';
 import '../App.css';
 import './Component.css';
+import Youtube from './Youtube';
+import Twitter from './Twitter';
 
 function VerticalMenu() {
 
     return (
         <div className="ui vertical menu" id="vertmenu">
-        <div className="item">
-            <div className="header">Testing Centers</div>
-            <div className="ui checkbox">
-                <input type="checkbox" name="example"/>
-                <label>Public</label>
+            <div className="item">
+                <Youtube />
             </div>
-            <div className="ui checkbox">
-                <input type="checkbox" name="example"/>
-                <label>Private</label>
-            </div>
-          </div>
-        <div className="item">
-            <div className="header">
-                Essential Shopping
-            </div>
-                <div className="ui checkbox">
-                    <input type="checkbox" name="example"/>
-                    <label>Pharmacy</label>
-                </div>
-                <div className="ui checkbox">
-                    <input type="checkbox" name="example"/>
-                    <label>Grocery</label>
-                </div>
-                <div className="ui checkbox">
-                    <input type="checkbox" name="example"/>
-                    <label>Resturants</label>
-                </div>
-                <div className="ui checkbox">
-                    <input type="checkbox" name="example"/>
-                    <label>General</label>
-                </div>
-        </div>
-        <div className="item">
-            <div className="header">
-              Food Banks
-            </div>
-            <div className="ui checkbox">
-                <input type="checkbox" name="example"/>
-                <label>Public</label>
-            </div>
-            <div className="ui checkbox">
-                <input type="checkbox" name="example"/>
-                <label>Churches</label>
-            </div>
-            <div className="ui checkbox">
-                <input type="checkbox" name="example"/>
-                <label>Private</label>
+            <div className="item">
+                <Twitter />
             </div>
         </div>
-    </div>
     )
 }
 

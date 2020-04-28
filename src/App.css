@@ -110,17 +110,9 @@ html, body {
 
 .youtube {
   margin: 0 auto;
-}
 
-/* .cdcButton {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 20px;
-  background-color: #e74c3c;
-  border-top-left-radius: 25%;
-  border-bottom-left-radius: 25%;
-  margin-right: 33.3%;
-} */
+  /* width: 100%; */
+}
 
 .btn-outline-danger {
   margin: 10px;

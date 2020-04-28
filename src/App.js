@@ -40,8 +40,8 @@ function App() {
                 </>
                 <Route path="/exercises" component={Exercise} />
             </div>
-            <Route exact path="/" component={Youtube} />
-            <Route exact path="/" component={Twitter} />
+            {/* <Route exact path="/" component={Youtube} /> */}
+            {/* <Route exact path="/" component={Twitter} /> */}
 
           </main>
         </Switch>
