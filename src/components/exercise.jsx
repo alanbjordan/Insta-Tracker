@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Accordion from 'react-bootstrap/Accordion';
+import Card from 'react-bootstrap/Card';
 
 class Exercise extends Component {
     state = {
@@ -27,23 +29,23 @@ class Exercise extends Component {
 
     handleMuscleChange = event => {
         this.setState({
-            musclesId: event.target.tabIndex,
-          selectMuscle: event.target.value,
+            musclesId: event.target.value,
+          selectMuscle: event.target.id,
         })
-        console.log(this.state.musclesId)
+        console.log(this.state.selectMuscle)
     }
 
     handleEquipChange = event => {
         this.setState({
-            equipmentId: event.target.tabIndex,
-          selectEquipment: event.target.value
+            equipmentId: event.target.value,
+          selectEquipment: event.target.id
         })
         console.log(this.state.selectEquipment)
     }
 
     handleSubmit = async event => {
         event.preventDefault();
-        const url = await fetch(`https://wger.de/api/v2/exercise/?language=2&muscles=${this.state.musclesId}&equipment=${this.state.equipmentId}/?format=json`);
+        const url = await fetch(`https://wger.de/api/v2/exercise/?language=2&muscles=${this.state.musclesId}&equipment=${this.state.equipmentId}`);
         const response = await url.json();
         const data = response.results;
         this.setState({
@@ -68,7 +70,7 @@ class Exercise extends Component {
     }
 
     render() {
-        const { muscles, equipment } = this.state
+        const { muscles, equipment, exercises } = this.state
         return (
             <div>
                 What body part would you like to work?
@@ -77,7 +79,7 @@ class Exercise extends Component {
                         <label id="muscleSelectLabel">SELECT A MUSCLE:
                             <select onChange={this.handleMuscleChange} id="muscleChangeForm">
                                 {muscles.map(muscle => (
-                                    <option tabIndex={muscle.id} key={muscle.id} value={muscle.name}>{muscle.name}</option>
+                                    <option id={muscle.name} key={muscle.id} value={muscle.id}>{muscle.name}</option>
                                 ))}
                             </select>
                         </label>
@@ -87,12 +89,32 @@ class Exercise extends Component {
                         <label id="equipmentSelectLabel">SELECT A PIECE OF EQUIPMENT:
                             <select onChange={this.handleEquipChange} id="equipmentChangeForm">
                                 {equipment.map(stuff => (
-                                    <option tabIndex={stuff.id} key={stuff.id} value={stuff.name}>{stuff.name}</option>
+                                    <option id={stuff.name} key={stuff.id} value={stuff.id}>{stuff.name}</option>
                                 ))}
                             </select>
                         </label>
                         <input type="submit" value="Submit" />
                     </form>
+                </div>
+                <br></br>
+                <div>
+                EXERCISES: 
+                <br></br>
+                    <div>
+                        {exercises.map(exercise => (
+                            // <p id={exercise.name} key={exercise.id} value={exercise.id} > {exercise.name} </p>
+                            <Accordion key={exercise.id}>
+                                <Card>
+                                    <Accordion.Toggle as={Card.Header} eventKey="0">
+                                        {exercise.name}
+                                    </Accordion.Toggle>
+                                    <Accordion.Collapse eventKey="0">
+                                    <Card.Body>{exercise.description}</Card.Body>
+                                    </Accordion.Collapse>
+                                </Card>
+                            </Accordion>
+                        ))}
+                    </div>
                 </div>
             </div>
         )
@@ -101,4 +123,3 @@ class Exercise extends Component {
 
 export default Exercise;
 
-// Link to get exercises based on muscle group and equipment available https://wger.de/api/v2/exercise/?language=2&muscles={this.state.muscles}&equipment={this.state.equipment}
