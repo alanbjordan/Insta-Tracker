@@ -80,7 +80,6 @@ class CovidData extends Component {
         const countryData = this.state.countryData;
         return (
             <div className="data">
-                
                 <div className='resultsDiv'>
                     <img src='https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png' className='flag' alt='state flag'/>
                     <div>
