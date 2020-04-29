@@ -32,7 +32,6 @@ class News extends Component {
             return (
               <div className='container'  className="ui raised segment" key={index}>
                 <h5 className='text'>{item.title}</h5>
-
                 <a href={item.url} rel="noopener noreferrer" target='_blank'>
                   Read More
                 </a>

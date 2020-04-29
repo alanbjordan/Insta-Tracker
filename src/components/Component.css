@@ -6,11 +6,12 @@
     width: 100%;
     height: 100%;
     grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
 }
 
 .news {
     /* margin: 10px; */
-    grid-column: 1 / span 2;
+    grid-column: 2 / span 1;
     grid-row: 2 / span 1;
     text-align: center;
     height: 100%;
@@ -107,4 +108,17 @@
 
   label {
     font-size: 2em;
+  }
+
+  .lineChart {
+    width: 100%;
+    height: 270px;
+    /* background-color: blue; */
+    overflow: scroll;
+  }
+
+  .cdcTweets {
+    overflow-y: scroll;
+    width: 400px;
+    margin: 0 auto;
   }

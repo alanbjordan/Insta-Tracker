@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../App.css';
 import './Component.css';
-import { LineChart, Line } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 
 class CovidData extends Component {
     state = {
@@ -26,11 +26,20 @@ class CovidData extends Component {
 
     //CountryData
     getCountryData = async () => {
-        const url = `https://covidtracking.com/api/v1/us/current.json`
+        const url = `https://covidtracking.com/api/v1/us/daily.json`
         const countryData = await this.loadData(url);;
         console.log('the country data => ',countryData[0])
         return this.setState({
             countryData: countryData[0]
+        })
+    }
+
+    getChartData = async () => {
+        const url = `https://covidtracking.com/api/v1/us/daily.json`
+        const chartData = await this.loadData(url);
+        console.log('chart data => ', chartData);
+        return this.setState({
+            chartData: chartData
         })
     }
     
@@ -57,20 +66,13 @@ class CovidData extends Component {
         }, this.handleChange(event));
     }
 
-     getChartData = async () => {
-         const url = `https://covidtracking.com/api/v1/states/daily.json`
-         const chartData = await this.loadData(url);
-         console.log('chart data => ', chartData);
-         return this.setState({
-             chartData
-         })
-     }
+
 
     async componentDidMount() {
         const url = `https://covidtracking.com/api/v1/states/current.json`
         const stateData = await this.loadData(url);
         this.setState({
-            stateData
+            stateData: stateData
         })
         this.getCountryData();
         this.getChartData();
@@ -85,18 +87,51 @@ class CovidData extends Component {
  
 
     render() {
-        const {stateData} = this.state;
+        const stateData = this.state.stateData;
+        console.log(stateData)
         const { data } = this.state;
         const theState = this.state.theState;
         const lcState = theState.toLowerCase();
         const countryData = this.state.countryData;
         const chartData = this.state.chartData;
-    //     if (chartData.length !== 0) {
-    //         for (let i = 0; i < 56; i++ ) {
-    //             console.log("Positive Cases", chartData[i])
-    //         }
-    // }
-        const newData = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, {name: 'Page B', uv: 300, pv: 1400, amt: 1400}, {name: 'Page C', uv: 200, pv: 800, amt: 800}];
+        console.log("cd render", countryData)
+        function day1() {
+            if (chartData !== undefined) {
+                console.log("chart data at render => ", chartData[0].positive); return chartData[0].positive;
+                }
+            }
+        function day2() {
+            if (chartData !== undefined) {
+                console.log("chart data at render2 => ", chartData[1].positive); return chartData[1].positive;
+                }
+            }
+        function day3() {
+            if (chartData !== undefined) {
+                console.log("chart data at render3 => ", chartData[2].positive); return chartData[2].positive;
+                }
+            }
+        function day4() {
+            if (chartData !== undefined) {
+                console.log("chart data at render3 => ", chartData[3].positive); return chartData[3].positive;
+                }
+            }
+        function day5() {
+            if (chartData !== undefined) {
+                console.log("chart data at render3 => ", chartData[4].positive); return chartData[4].positive;
+                }
+            }
+        function day6() {
+            if (chartData !== undefined) {
+                console.log("chart data at render3 => ", chartData[5].positive); return chartData[5].positive;
+                }
+            }
+        function day7() {
+            if (chartData !== undefined) {
+                console.log("chart data at render3 => ", chartData[6].positive); return chartData[6].positive;
+                }
+            }
+        
+        const newData = [{name: "7 Days", uv: day7(), pv: 2400, amt: 2400}, {name: '6 Days', uv: day6(), pv: 2400, amt: 2400}, {name: '5 Days', uv: day5(), pv: 2400, amt: 2400}, {name: '4 Days', uv: day4(), pv: 2400, amt: 2400}, {name: '3 Days', uv: day3(), pv: 2400, amt: 2400}, {name: 'Yesterday', uv: day2(), pv: 2400, amt: 2400}, {name: 'Today', uv: day1(), pv: 2400, amt: 2400}];
         return (
             <div className="data">
                 <div className='resultsDiv'>
@@ -125,10 +160,14 @@ class CovidData extends Component {
                     </div>
                 </div>
                 <hr />
-                <div>
-                <LineChart width={400} height={400} data={newData}>
-                    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-                </LineChart>
+                <div className='lineChart'>
+                    <h1>7 Day Historical Chart</h1>
+                    <LineChart width={500} height={200} data={newData}>
+                        <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+                        <CartesianGrid stroke="#ccc" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                    </LineChart>
                 </div>
             </div>
         )
