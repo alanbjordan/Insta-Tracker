@@ -9,7 +9,7 @@ class CovidData extends Component {
         data: [],
         stateData: [],
         countryData: [],
-        theState: ["AK"],
+        theState: "ak",
     }
 
     loadData = async (url) => {
@@ -26,8 +26,7 @@ class CovidData extends Component {
     //CountryData
     getCountryData = async () => {
         const url = `https://covidtracking.com/api/v1/us/current.json`
-        const countryData = await this.loadData(url);
-        console.log("countryData =>", countryData[0]);
+        const countryData = await this.loadData(url);;
         return this.setState({
             data: countryData[0]
         })
@@ -63,6 +62,7 @@ class CovidData extends Component {
             stateData
         })
         this.getCountryData();
+
     }
 
     handleChange = async (event) => {        
@@ -73,9 +73,11 @@ class CovidData extends Component {
 
     render() {
         const { data, stateData} = this.state;
-
+        const theState = this.state.theState;
+        const lcState = theState.toLowerCase();
         return (
             <div className="data">
+                <button onClick={this.getStateFlag}>Get State Flag</button>
                 <button onClick={this.handleCountryChange} id='usButton'>See U.S. Totals</button>
                 <h3>or</h3>
                 <h2>Select a State</h2>
@@ -86,9 +88,12 @@ class CovidData extends Component {
                     </select> 
                     </label> 
                 </form  >
-                <h5>Positive Test: {data.positive}</h5>
-                <h5>Total Deaths: {data.death}</h5>
-                <h5>Total Cases: {data.total}</h5>
+                <hr />
+                <img src={`http://flags.ox3.in/svg/us/${lcState}.svg`} className='flag' alt='state flag'/>
+                <h3>Positive Test: </h3>{data.positive}
+                <h5>Total Deaths: </h5>{data.death}
+                <h5>Total Cases: </h5>{data.total}
+                <hr />
             </div>
         )
     }
