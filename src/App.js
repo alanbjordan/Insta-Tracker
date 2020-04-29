@@ -7,8 +7,6 @@ import Menu from './components/Menu';
 import News from './components/News';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Exercise from './components/exercise';
-import Youtube from './components/Youtube';
-import Twitter from './components/Twitter';
 
 function App() {
   return (
@@ -20,10 +18,10 @@ function App() {
           <Link to={"/"} className="header item">
             Home
           </Link>
-          <a href="#" className="item">
+          <a href="https://www.google.com" className="item">
             News
           </a>
-          <a href="#" className="item">
+          <a href="https://www.google.com" className="item">
             Trends
           </a>
           <Link to={"/exercises"} className="item">
@@ -40,9 +38,6 @@ function App() {
                 </>
                 <Route path="/exercises" component={Exercise} />
             </div>
-            {/* <Route exact path="/" component={Youtube} /> */}
-            {/* <Route exact path="/" component={Twitter} /> */}
-
           </main>
         </Switch>
       </Router>
