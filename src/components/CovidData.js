@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../App.css';
 import './Component.css';
+import { LineChart, Line } from 'recharts';
 
 class CovidData extends Component {
     state = {
@@ -56,6 +57,15 @@ class CovidData extends Component {
         }, this.handleChange(event));
     }
 
+     getChartData = async () => {
+         const url = `https://covidtracking.com/api/v1/states/daily.json`
+         const chartData = await this.loadData(url);
+         console.log('chart data => ', chartData);
+         return this.setState({
+             chartData
+         })
+     }
+
     async componentDidMount() {
         const url = `https://covidtracking.com/api/v1/states/current.json`
         const stateData = await this.loadData(url);
@@ -63,7 +73,7 @@ class CovidData extends Component {
             stateData
         })
         this.getCountryData();
-
+        this.getChartData();
     }
 
     handleChange = async (event) => {        
@@ -72,40 +82,54 @@ class CovidData extends Component {
         }, this.getStateData);
     }
 
+ 
+
     render() {
         const {stateData} = this.state;
         const { data } = this.state;
         const theState = this.state.theState;
         const lcState = theState.toLowerCase();
         const countryData = this.state.countryData;
+        const chartData = this.state.chartData;
+        if (chartData.length !== 0) {
+            for (let i = 0; i < 56; i++ ) {
+                console.log("Positive Cases", chartData[i])
+            }
+    }
+        const newData = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, {name: 'Page B', uv: 300, pv: 1400, amt: 1400}, {name: 'Page C', uv: 200, pv: 800, amt: 800}];
         return (
             <div className="data">
                 <div className='resultsDiv'>
                     <img src='https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png' className='flag' alt='state flag'/>
-                    <div>
-                        <h3 className='results1'>Positive Test: </h3><h5>{countryData.positive}</h5>
-                        <h3 className='results1'>Total Deaths: </h3><h5>{countryData.death}</h5>
-                        <h3 className='results1'>Total Cases: </h3><h5>{countryData.total}  </h5>                     
+                    <div className='usa'>
+                        <h3 className='results1'>Positive Test: </h3><h2>{countryData.positive}</h2>
+                        <h3 className='results1'>Total Deaths: </h3><h2>{countryData.death}</h2>
+                        <h3 className='results1'>Total Cases: </h3><h2>{countryData.total}  </h2>                     
                     </div>
                 </div>
+                <div className='resultsDiv2'>
                 <h2>Select a State</h2>
                 <form  value={this.state.theState} onChange={this.handleChange}>
-                    <label>State:
-                    <select class="ui selection dropdown">
-                        {stateData.map((state) => <option  class="dropdown icon" key={state.state} value={state.state}>{state.state}</option>)}
+                    <label>
+                    <select className="ui selection dropdown">
+                        {stateData.map((state) => <option  className="dropdown icon" key={state.state} value={state.state}>{state.state}</option>)}
                     </select> 
                     </label> 
                 </form  >
-                <div className='resultsDiv'>
-                    <img src={`http://flags.ox3.in/svg/us/${lcState}.svg`} className='flag' alt='state flag'/>
+
+                    <img src={`http://flags.ox3.in/svg/us/${lcState}.svg`} className='flag2' alt='state flag'/>
                     <div>
-                        <h3 className='results1'>Positive Test: </h3><h5>{data.positive}</h5>
-                        <h3 className='results1'>Total Deaths: </h3><h5>{data.death}</h5>
-                        <h3 className='results1'>Total Cases: </h3><h5>{data.total}  </h5>                     
+                        <h3 className='results1'>Positive Test: </h3><h2>{data.positive}</h2>
+                        <h3 className='results1'>Total Deaths: </h3><h2>{data.death}</h2>
+                        <h3 className='results1'>Total Cases: </h3><h2>{data.total}  </h2>                     
                     </div>
                 </div>
-
                 <hr />
+                <div>
+                <LineChart width={400} height={400} data={newData}>
+                    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+                </LineChart>
+                </div>
             </div>
         )
     }

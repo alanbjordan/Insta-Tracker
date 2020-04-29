@@ -30,7 +30,7 @@ class News extends Component {
       <div className='news'>
           {this.state.articles.map((item, index) => {
             return (
-              <div className='container'  class="ui raised segment" key={index}>
+              <div className='container'  className="ui raised segment" key={index}>
                 <h5 className='text'>{item.title}</h5>
 
                 <a href={item.url} rel="noopener noreferrer" target='_blank'>

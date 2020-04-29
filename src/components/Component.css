@@ -68,20 +68,41 @@
   .flag {
     margin-left: 5px;
     width: 100%;
-    height: 100%;
+    height: 80%;
     grid-column: 1 / span 1;
     border: 1px solid rgb(160, 160, 160);
   }
 
   .resultsDiv {
     margin-top: 20px;
-    height: 150px;
+    height: 200px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border: 4px solid black;
   }
 
   .results1 {
     grid-column: 2 / span 1;
+  }
+
+  .resultsDiv2 {
+    margin-top: 20px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    border: 4px solid black;
+    padding: 5px;
+  }
+
+  .flag2 {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width: 250px;
+    height: 100%;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    border: 1px solid rgb(160, 160, 160);
   }
 
   label {
