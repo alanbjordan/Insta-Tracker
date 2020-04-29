@@ -148,3 +148,8 @@ html, body {
   width: 400px;
   margin: 0 auto;
 }
+
+.cdcButton {
+  border-radius: 25%;
+  background-color: #00acee ;
+}

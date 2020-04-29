@@ -13,7 +13,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-twitter-embed": "^3.0.3",
-    "twit": "^2.2.11"
+    "twit": "^2.2.11",
+    "twitter": "^1.7.1"
   },
   "scripts": {
     "start": "react-scripts start",
