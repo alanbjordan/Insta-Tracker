@@ -10,7 +10,7 @@ function VerticalMenu() {
         <div className="ui vertical menu" id="vertmenu">
             <div className="item">
                 <Youtube />
-            </div>
+            </div> <hr />
             <div className="item">
                 <Twitter />
             </div>
