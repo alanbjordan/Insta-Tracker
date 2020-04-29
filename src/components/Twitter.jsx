@@ -9,6 +9,8 @@ class Twitter extends Component {
                 sourceType="profile"
                 screenName='cdcgov'
                 options={{height: 360}}
+                noHeader
+                noFooter
             />
         )
     }
