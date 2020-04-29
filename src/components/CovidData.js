@@ -91,11 +91,11 @@ class CovidData extends Component {
         const lcState = theState.toLowerCase();
         const countryData = this.state.countryData;
         const chartData = this.state.chartData;
-        if (chartData.length !== 0) {
-            for (let i = 0; i < 56; i++ ) {
-                console.log("Positive Cases", chartData[i])
-            }
-    }
+    //     if (chartData.length !== 0) {
+    //         for (let i = 0; i < 56; i++ ) {
+    //             console.log("Positive Cases", chartData[i])
+    //         }
+    // }
         const newData = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, {name: 'Page B', uv: 300, pv: 1400, amt: 1400}, {name: 'Page C', uv: 200, pv: 800, amt: 800}];
         return (
             <div className="data">
