@@ -6,7 +6,7 @@ function Menu() {
     
     return (
         <>
-        <div className="item menu1">
+        <div className="menu1">
           INSTA TRACKER
         </div>
         </>

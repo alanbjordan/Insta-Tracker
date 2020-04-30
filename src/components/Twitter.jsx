@@ -8,9 +8,14 @@ class Twitter extends Component {
             <TwitterTimelineEmbed
                 sourceType="profile"
                 screenName='cdcgov'
-                options={{height: 360}}
+                options={{
+                    // borderRadius: 30,
+                    height: 400
+                }}
                 noHeader
                 noFooter
+                theme='dark'
+                transparent
             />
         )
     }

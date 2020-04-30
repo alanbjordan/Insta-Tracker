@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import '../App.css';
 import './Component.css';
 
+let newsapiKey;
+if (process.env.NODE_ENV !== 'build') {
+  newsapiKey = process.env.REACT_APP_NEWS_API_KEY;
+} else {
+  newsapiKey = process.env.NEWS_API_KEY;
+}
+
 class News extends Component {
   constructor(props) {
     super(props);
@@ -13,27 +20,29 @@ class News extends Component {
 
   componentDidMount() {
     fetch(
-      'http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=3e5a4b43acad4e7485d9486c10fd4fc4'
+      `http://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${newsapiKey}`
     )
       .then((response) => {
         return response.json();
       })
       .then((data) => {
         this.setState({
-          articles: data.articles,
+          articles: data.articles
         });
       });
   }
 
   render() {
+    console.log(this.state.articles)
     return (
       <div>
-        <div className='cdcyttext'><h1>News Updates</h1></div>
+        {/* <div className='cdcyttext'><h1>News Updates</h1></div> */}
         <div className='news'>       
             {this.state.articles.map((item, index) => {
               return (
-                <div className='container'  className="ui raised segment" key={index}>
+                <div className='container' key={index}>
                   <h5 className='text'>{item.title}</h5>
+                  <img src={item.urlToImage} className='newsImage'/>
                   <a href={item.url} rel="noopener noreferrer" target='_blank'>
                     Read More
                   </a>

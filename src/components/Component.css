@@ -7,25 +7,30 @@
 }
 
 .news {
+  background-color: rgb(72, 72, 72);
+  border-radius: 8px;
     overflow-y: scroll;  
-    margin: 10px;
+    margin: 20px;
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
     text-align: center;
     height: 220px;
     width: auto;
+    padding: 15px;
 }
 
-.newsPlaceholder {
+/* .newsPlaceholder {
     padding-top: 3%;
     font-size: 60px;
-}
+} */
 
 .map {
-  margin: 10px;
+    margin: 20px;
     grid-column: 2 / span 1;
     width: auto;
     text-align: center;
+    border: white solid 3px;
+    border-radius: 5px;
   }
   
   .hello {
@@ -37,7 +42,7 @@
     grid-row: 1 / span 2;
     width: auto;
     text-align: center;
-    margin-right: 10px;
+    margin-right: 20px;
   }
   
   .covid {
@@ -58,10 +63,13 @@
   }
 
   .resultsDiv {
+    background-color: rgb(72, 72, 72);
+    border-radius: 8px;
     margin-top: 20px;
     height: 200px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    box-shadow: 2px 2px 2px 1px rgb(58, 58, 58);
   }
 
   .results1 {
@@ -69,12 +77,16 @@
   }
 
   .resultsDiv2 {
+    /* border: solid white 1px; */
+    background-color: rgb(72, 72, 72);
+    border-radius: 8px;
     margin-top: 20px;
     height: 250px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2fr;
     padding: 5px;
+    box-shadow: 2px 2px 2px 1px rgb(58, 58, 58);
   }
 
   .flag2 {
@@ -92,8 +104,11 @@
   }
 
   .lineChart {
+    margin-top: 35px;
     width: 100%;
-    height: 270px;
+    height: 250px;
+    background-color: rgb(72, 72, 72);
+    border-radius: 8px;
   }
 
   .cdcTweets {
@@ -104,15 +119,20 @@
   .twittervm {
     margin: 10% auto;
     width: 100%;
-
+    height: 42%;
+    background-color: rgb(72, 72, 72);
+    border-radius: 8px;
   }
 
   .youtubevm {
+    padding: px;
     margin-top: 10px;
     margin: 5px;
     width: 100%;
-    height: 50%;
+    height: 35%;
     overflow-y: scroll;
+    background-color: rgb(72, 72, 72);
+    border-radius: 8px;
   }
 
   .countryTable {
@@ -120,7 +140,12 @@
   }
 
 .cdcyttext {
-  background-color: rgb(215, 213, 213);
+  /* background-color: rgb(215, 213, 213); */
+  color: white;
   border-radius: 10px;
   width: 99%;
+}
+
+.newsImage {
+  width: 150px;
 }

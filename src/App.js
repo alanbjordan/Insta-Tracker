@@ -14,10 +14,9 @@ function App() {
       <Router>
         <Switch>
           <main>
-          <div className="ui menu">
 
-          <Route path="/" component={Menu} />
-        </div>
+
+
             <div className="wrapper">
                 <Route exact path="/" component={VerticalMenu}/>
                 <Route exact path="/" component={Map} />

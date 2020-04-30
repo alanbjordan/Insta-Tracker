@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 
-const API = 'AIzaSyCF6-Gp5GftHubZ6danNcSYQATv47ZtDS0'
-const playlistId = 'PLvrp9iOILTQaJa78zFQ0QgvShQ2HEwHxP'
+let apiKey;
+let playlistIdKey;
+if (process.env.NODE_ENV !== 'build') {
+  apiKey = process.env.REACT_APP_API_KEY;
+  playlistIdKey = process.env.REACT_APP_PLAYLISTID_KEY;
+} else {
+  apiKey = process.env.API_KEY;
+  playlistIdKey = process.env.PLAYLISTID_KEY;
+}
+
 const maxResults = 10;
-const cdcURL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=${maxResults}&playlistId=${playlistId}&key=${API}`
+const cdcURL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=${maxResults}&playlistId=${playlistIdKey}&key=${apiKey}`
 
 class Youtube extends Component {
 

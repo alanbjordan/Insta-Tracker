@@ -58,6 +58,7 @@ class CovidData extends Component {
 
     //StateData
     getStateData = async () => {
+
         const url = `https://covidtracking.com/api/v1/states/${this.state.theState}/daily.json`
         const stateData = await this.loadData(url);
         return this.setState({
@@ -400,7 +401,7 @@ class CovidData extends Component {
                     </LineChart>
                 </div>
                 <div>
-                   <CountryTable /> 
+                   {/* <CountryTable />  */}
                 </div>
             </div>
         )
