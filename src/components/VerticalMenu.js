@@ -7,13 +7,13 @@ import Twitter from './Twitter';
 function VerticalMenu() {
 
     return (
-        <div className="ui vertical menu" id="vertmenu">
-            <div><h1>CDC Video Updates</h1></div>
-            <div className="item">
+        <div id="vertmenu">
+            <div className='cdcyttext'><h1>CDC Video Updates</h1></div>
+            <div className='youtubevm'>
                 <Youtube />
             </div> <hr />
-            <div><h1>CDC Twitter Updates</h1></div>
-            <div className="item">
+            <div className='cdcyttext'><h1>CDC Twitter Updates</h1></div>
+            <div className='twittervm'>
                 <Twitter />
             </div>
         </div>

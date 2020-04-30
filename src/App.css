@@ -1,11 +1,10 @@
 .App {
   text-align: center;
-  background-color: rgb(171, 171, 171);
+  background-color: rgb(255, 255, 255);
 }
 
 main {
   margin: auto auto;
-  /* background-color: rgb(224, 224, 224); */
   width: 100vw;
   height: 100vh;
   border-radius: 5px;
@@ -19,7 +18,6 @@ main {
   grid-template-rows: 3fr 1fr;
   grid-column-gap: 5px;
   background-color: rgb(255, 255, 255);
-  /* margin: 0 auto;    */
   height: 94%;
   width: 100%;
   border-radius: 5px;
@@ -106,12 +104,6 @@ html, body {
 }
 #target {
   width: 345px;
-}
-
-.youtube {
-  margin: 0 auto;
-
-  /* width: 100%; */
 }
 
 .btn-outline-danger {

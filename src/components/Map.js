@@ -7,9 +7,7 @@ import './Component.css';
 function Map() {
 
 return (
-    <div>
-
-    
+    <div className='map'>
      <Iframe
         width='100%'
         height='100%'

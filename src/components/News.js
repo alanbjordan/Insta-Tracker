@@ -27,20 +27,23 @@ class News extends Component {
 
   render() {
     return (
-      <div className='news'>
-          {this.state.articles.map((item, index) => {
-            return (
-              <div className='container'  className="ui raised segment" key={index}>
-                <h5 className='text'>{item.title}</h5>
-                <a href={item.url} rel="noopener noreferrer" target='_blank'>
-                  Read More
-                </a>
-                <p className='text'>{item.content}</p>
-              </div>
-            );
-          })}
-        ;
-      </div>
+      <div>
+        <div className='cdcyttext'><h1>News Updates</h1></div>
+        <div className='news'>       
+            {this.state.articles.map((item, index) => {
+              return (
+                <div className='container'  className="ui raised segment" key={index}>
+                  <h5 className='text'>{item.title}</h5>
+                  <a href={item.url} rel="noopener noreferrer" target='_blank'>
+                    Read More
+                  </a>
+                  <p className='text'>{item.content}</p>
+                </div>
+              );
+            })}
+          ;
+        </div>
+     </div> 
     );
   }
 }

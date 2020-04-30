@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../App.css';
 import './Component.css';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+import CountryTable from './CountryTable';
 
 class CovidData extends Component {
     state = {
@@ -334,9 +335,7 @@ class CovidData extends Component {
             }
         ]
         const stateData = this.state.stateData;
-        console.log(this.state)
         const { data } = this.state;
-        console.log(this.state.data)
         const theState = this.state.theState;
         const upperTheState = theState.toUpperCase();
         const lcState = theState.toLowerCase();
@@ -363,6 +362,7 @@ class CovidData extends Component {
         }
 
         const newData = [{name: stateDateArray[13], uv: statePosArray[13], pv: 2400, amt: 2400}, {name: stateDateArray[12], uv: statePosArray[12], pv: 2400, amt: 2400}, {name: stateDateArray[11], uv: statePosArray[11], pv: 2400, amt: 2400}, {name: stateDateArray[10], uv: statePosArray[10], pv: 2400, amt: 2400},{name: stateDateArray[9], uv: statePosArray[9], pv: 2400, amt: 2400}, {name: stateDateArray[8], uv: statePosArray[8], pv: 2400, amt: 2400}, {name: stateDateArray[7], uv: statePosArray[7], pv: 2400, amt: 2400}, {name: stateDateArray[6], uv: statePosArray[6], pv: 2400, amt: 2400}, {name: stateDateArray[5], uv: statePosArray[5], pv: 2400, amt: 2400}, {name: stateDateArray[4], uv: statePosArray[4], pv: 2400, amt: 2400}, {name: stateDateArray[3], uv: statePosArray[3], pv: 2400, amt: 2400}, {name: stateDateArray[2], uv: statePosArray[2], pv: 2400, amt: 2400}, {name: stateDateArray[1], uv: statePosArray[1], pv: 2400, amt: 2400}, {name: stateDateArray[0], uv: statePosArray[0], pv: 2400, amt: 2400}];
+
         return (
             <div className="data">
                 <div className='resultsDiv'>
@@ -374,7 +374,6 @@ class CovidData extends Component {
                     </div>
                 </div>
                 <div className='resultsDiv2'>
-                {/* <h2>Select a State</h2> */}
                 <h1>{matchingState[0]}</h1>
                 <form  value={this.state.theState} onChange={this.handleChange}>
                     <label>
@@ -399,6 +398,9 @@ class CovidData extends Component {
                         <XAxis dataKey="name" />
                         <YAxis />
                     </LineChart>
+                </div>
+                <div>
+                   <CountryTable /> 
                 </div>
             </div>
         )

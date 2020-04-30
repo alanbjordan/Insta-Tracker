@@ -1,22 +1,19 @@
-.news {
-    overflow-y: scroll;
-}
-
 #vertmenu {
+  margin: 2px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
+    grid-row: 1 / span 2;
 }
 
 .news {
-    /* margin: 10px; */
+    overflow-y: scroll;  
+    margin: 10px;
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
     text-align: center;
-    height: 100%;
+    height: 220px;
     width: auto;
-    border: rgb(221, 219, 219) 1px solid;
 }
 
 .newsPlaceholder {
@@ -25,12 +22,10 @@
 }
 
 .map {
+  margin: 10px;
     grid-column: 2 / span 1;
     width: auto;
-    border: rgb(221, 219, 219) 1px solid;
     text-align: center;
-    /* margin: 10px; */
-    border-radius: 4px;
   }
   
   .hello {
@@ -41,24 +36,12 @@
     grid-column: 3 / span 1;
     grid-row: 1 / span 2;
     width: auto;
-    border: rgb(221, 219, 219) 1px solid;
-    /* margin: 10px; */
-    border-radius: 4px;
     text-align: center;
+    margin-right: 10px;
   }
   
   .covid {
     padding-top: 90%;
-  }
-
-  #usButton {
-    width: 50%;
-    height: 5%;
-    margin-top: 5%;
-    background-color: red;
-    color: white;
-    font-size: 2em;
-    border-radius: 10px;
   }
 
   .item {
@@ -79,7 +62,6 @@
     height: 200px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 4px solid black;
   }
 
   .results1 {
@@ -92,7 +74,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2fr;
-    border: 4px solid black;
     padding: 5px;
   }
 
@@ -113,12 +94,33 @@
   .lineChart {
     width: 100%;
     height: 270px;
-    /* background-color: blue; */
-    overflow: scroll;
   }
 
   .cdcTweets {
-    overflow-y: scroll;
     width: 400px;
     margin: 0 auto;
   }
+
+  .twittervm {
+    margin: 10% auto;
+    width: 100%;
+
+  }
+
+  .youtubevm {
+    margin-top: 10px;
+    margin: 5px;
+    width: 100%;
+    height: 50%;
+    overflow-y: scroll;
+  }
+
+  .countryTable {
+    overflow-y: scroll;
+  }
+
+.cdcyttext {
+  background-color: rgb(215, 213, 213);
+  border-radius: 10px;
+  width: 99%;
+}

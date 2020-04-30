@@ -15,18 +15,7 @@ function App() {
         <Switch>
           <main>
           <div className="ui menu">
-          <Link to={"/"} className="header item">
-            Home
-          </Link>
-          <a href="https://www.google.com" className="item">
-            News
-          </a>
-          <a href="https://www.google.com" className="item">
-            Trends
-          </a>
-          <Link to={"/exercises"} className="item">
-            Things To Do
-          </Link>
+
           <Route path="/" component={Menu} />
         </div>
             <div className="wrapper">
