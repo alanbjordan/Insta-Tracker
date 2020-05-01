@@ -37,16 +37,20 @@ class News extends Component {
     return (
       <div>
         {/* <div className='cdcyttext'><h1>News Updates</h1></div> */}
-        <div className='news'>       
+        <div className='news'>          
             {this.state.articles.map((item, index) => {
+                                
               return (
                 <div className='container' key={index}>
-                  <h5 className='text'>{item.title}</h5>
-                  <img src={item.urlToImage} className='newsImage'/>
-                  <a href={item.url} rel="noopener noreferrer" target='_blank' className='readmore'>
-                    Read More
-                  </a>
-                  <p className='text2'>{item.content}</p>
+                  <div>
+                    <div><hr className='line2'/></div>
+                    <a href={item.url} rel="noopener noreferrer" target='_blank' className='readmore'>
+                      <h5 className='text'>{item.title}</h5>  
+                    </a>                    
+                    <img src={item.urlToImage} className='newsImage'/>
+
+                    <p className='text2'>{item.content}</p>
+                  </div>
                 </div>
               );
             })}
