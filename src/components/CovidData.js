@@ -375,24 +375,24 @@ class CovidData extends Component {
                     </div>
                 </div>
                 <div className='resultsDiv2'>
-                <h1>{matchingState[0]}</h1>
+                <h1 className='stateName'>{matchingState[0]}</h1>
                 <form  value={this.state.theState} onChange={this.handleChange}>
-                    <label>
-                    <select className="ui selection dropdown">
+                    <label> Select State <br></br>
+                    <select className="ui compact menu">
                         {stateData.map((state) => <option  className="dropdown icon" key={state.state} value={state.state}>{state.state}</option>)}
                     </select> 
                     </label> 
                 </form>
                     <img src={`http://flags.ox3.in/svg/us/${lcState}.svg`} className='flag2' alt='state flag'/>
                     <div>
-                        <h3 className='results1'>Positive Test: </h3><h1 className='dp'>{data.positive}</h1>
-                        <h3 className='results1'>Total Deaths: </h3><h2>{data.death}</h2>
-                        <h3 className='results1'>Total Test: </h3><h2>{data.total}  </h2>                     
+                        <h1 className='dp'>{data.positive}</h1><h3 className='results1'>Total Positive Test: </h3>
+                        {/* <h2 className='dp'>{data.death}</h2><h3 className='results1'>Total Deaths: </h3> */}
+                        {/* <h3 className='results1'>Total Test: </h3><h2>{data.total}  </h2>                      */}
                     </div>
                 </div>
                 <hr />
                 <div className='lineChart'>
-                    <h1>14 Day Historical Chart (+ Test)</h1>
+                    <h1>{matchingState[0]}: 14 Day Historical(+ Test)</h1>
                     <LineChart width={500} height={200} data={newData}>
                         <Line type="monotone" dataKey="uv" stroke="#8884d8" />
                         <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>

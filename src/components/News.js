@@ -38,18 +38,16 @@ class News extends Component {
       <div>
         {/* <div className='cdcyttext'><h1>News Updates</h1></div> */}
         <div className='news'>          
-            {this.state.articles.map((item, index) => {
-                                
+            {this.state.articles.map((item, index) => {                 
               return (
                 <div className='container' key={index}>
-                  <div>
                     <div><hr className='line2'/></div>
+                    <div className='newsGrid'>
                     <a href={item.url} rel="noopener noreferrer" target='_blank' className='readmore'>
                       <h5 className='text'>{item.title}</h5>  
                     </a>                    
                     <img src={item.urlToImage} className='newsImage'/>
-
-                    <p className='text2'>{item.content}</p>
+                    {/* <p className='text2'>{item.content}</p> */}
                   </div>
                 </div>
               );
