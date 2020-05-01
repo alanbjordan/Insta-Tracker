@@ -43,10 +43,10 @@ class News extends Component {
                 <div className='container' key={index}>
                   <h5 className='text'>{item.title}</h5>
                   <img src={item.urlToImage} className='newsImage'/>
-                  <a href={item.url} rel="noopener noreferrer" target='_blank'>
+                  <a href={item.url} rel="noopener noreferrer" target='_blank' className='readmore'>
                     Read More
                   </a>
-                  <p className='text'>{item.content}</p>
+                  <p className='text2'>{item.content}</p>
                 </div>
               );
             })}
