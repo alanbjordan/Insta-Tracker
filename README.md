@@ -31,6 +31,8 @@ This application includes:
 
 - Finding creditable API/Datasets for Covid-19 information
 - Styling
+  - Responsiveness
+  - Use of different CSS frameworks
 - Finding an API that contained testing sites for each state
 - React.js syntax
 - Transfering API data in a chart and making it dynamic
@@ -42,6 +44,7 @@ This application includes:
 - We were able to connect multiple APIs in a single component(CovidData Component)
 - Made the chart dynamic, State Name, 14(+test) information changes with state selection from the drop down box
 - Created a responsive site using CSS grid
+- Made all of the different CSS frameworks work together for a seemless flow to the application
 - Team work and Collaboration
 
 
