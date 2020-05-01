@@ -1,22 +1,22 @@
 #vertmenu {
   margin: 2px;
-    width: 100%;
-    height: 100vh;
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 2;
+  width: 100%;
+  height: 100vh;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
 }
 
 .news {
   background-color: rgb(72, 72, 72);
   border-radius: 8px;
-    overflow-y: scroll;  
-    margin: 20px;
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
-    text-align: center;
-    height: 220px;
-    width: auto;
-    padding: 15px;
+  overflow-y: scroll;
+  margin: 20px;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  text-align: center;
+  height: 220px;
+  width: auto;
+  padding: 15px;
 }
 
 /* .newsPlaceholder {
@@ -25,119 +25,120 @@
 } */
 
 .map {
-    margin: 20px;
-    grid-column: 2 / span 1;
-    width: auto;
-    text-align: center;
-    border: white solid 3px;
-    border-radius: 5px;
-  }
-  
-  .hello {
-    padding-top: 30%;
-  }
-  
-  .data {
-    grid-column: 3 / span 1;
-    grid-row: 1 / span 2;
-    width: auto;
-    text-align: center;
-    margin-right: 20px;
-  }
-  
-  .covid {
-    padding-top: 90%;
-  }
+  margin: 20px;
+  grid-column: 2 / span 1;
+  width: auto;
+  text-align: center;
+  border: white solid 3px;
+  border-radius: 5px;
+}
 
-  .item {
-    overflow-y: scroll;
-    height: 50%;
-  }
+.hello {
+  padding-top: 30%;
+}
 
-  .flag {
-    margin-left: 5px;
-    width: 100%;
-    height: 80%;
-    grid-column: 1 / span 1;
-    border: 1px solid rgb(160, 160, 160);
-  }
+.data {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 2;
+  width: auto;
+  text-align: center;
+  margin-right: 20px;
+}
 
-  .resultsDiv {
-    background-color: rgb(72, 72, 72);
-    border-radius: 8px;
-    margin-top: 20px;
-    height: 200px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    box-shadow: 2px 2px 2px 1px rgb(58, 58, 58);
-  }
+.covid {
+  padding-top: 90%;
+}
 
-  .results1 {
-    grid-column: 2 / span 1;
-  }
+.item {
+  overflow-y: scroll;
+  height: 50%;
+}
 
-  .resultsDiv2 {
-    /* border: solid white 1px; */
-    background-color: rgb(72, 72, 72);
-    border-radius: 8px;
-    margin-top: 20px;
-    height: 250px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 2fr;
-    padding: 5px;
-    box-shadow: 2px 2px 2px 1px rgb(58, 58, 58);
-  }
+.flag {
+  margin-left: 5px;
+  width: 100%;
+  height: 80%;
+  grid-column: 1 / span 1;
+  border: 1px solid rgb(160, 160, 160);
+}
 
-  .flag2 {
-    margin-left: 5px;
-    margin-bottom: 5px;
-    width: 250px;
-    height: 100%;
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-    border: 1px solid rgb(160, 160, 160);
-  }
+.resultsDiv {
+  background-color: rgb(72, 72, 72);
+  border-radius: 8px;
+  margin-top: 20px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 2px 2px 2px 1px rgb(58, 58, 58);
+}
 
-  label {
-    font-size: 2em;
-  }
+.results1 {
+  grid-column: 2 / span 1;
+}
 
-  .lineChart {
-    margin-top: 35px;
-    width: 100%;
-    height: 250px;
-    background-color: rgb(72, 72, 72);
-    border-radius: 8px;
-  }
+.resultsDiv2 {
+  /* border: solid white 1px; */
+  background-color: rgb(72, 72, 72);
+  border-radius: 8px;
+  margin-top: 20px;
+  height: 250px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  padding: 5px;
+  box-shadow: 2px 2px 2px 1px rgb(58, 58, 58);
+}
 
-  .cdcTweets {
-    width: 400px;
-    margin: 0 auto;
-  }
+.flag2 {
+  margin-left: 5px;
+  margin-bottom: 5px;
+  width: 250px;
+  height: 100%;
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  border: 1px solid rgb(160, 160, 160);
+}
 
-  .twittervm {
-    margin: 10% auto;
-    width: 100%;
-    height: 42%;
-    background-color: rgb(72, 72, 72);
-    border-radius: 8px;
-  }
+label {
+  font-size: 2em;
+}
 
-  .youtubevm {
-    padding: px;
-    margin-top: 10px;
-    margin: 5px;
-    width: 100%;
-    height: 35%;
-    overflow-y: scroll;
-    background-color: rgb(72, 72, 72);
-    border-radius: 8px;
-  }
+.lineChart {
+  margin-top: 35px;
+  width: 100%;
+  height: 250px;
+  background-color: rgb(72, 72, 72);
+  border-radius: 8px;
+}
 
-  .countryTable {
-    overflow-y: scroll;
-  }
+.cdcTweets {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.twittervm {
+  margin: 10% auto;
+  width: 100%;
+  height: 35%;
+  background-color: rgb(72, 72, 72);
+  border-radius: 8px;
+  overflow-y: scroll;
+}
+
+.youtubevm {
+  padding: px;
+  margin-top: 10px;
+  margin: 5px;
+  width: 100%;
+  height: 35%;
+  overflow-y: scroll;
+  background-color: rgb(72, 72, 72);
+  border-radius: 8px;
+}
+
+.countryTable {
+  overflow-y: scroll;
+}
 
 .cdcyttext {
   /* background-color: rgb(215, 213, 213); */
