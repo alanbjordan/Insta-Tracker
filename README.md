@@ -1,6 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Video
+- Place Holder
 
- ### `Authors`
+## Authors
  
   - Jamario Davis
   - Victor Gamble
@@ -9,11 +10,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `Application Stack`
   - Front-End => React.js
-  - Back-End => Node.js
+  - Back-End => Express.js/Node.js
+  - Database => PostgreSQL
 
 ## Project Scope
 
-This application is intended to show up to date information on the Covid-19 pandemic.<br/>
+This application is intended to show up to date information on the Covid-19 pandemic in one place.<br/>
 This application includes:
   - The latest Youtube video updates from the CDC
   - The latest tweets from CDC
@@ -27,8 +29,20 @@ This application includes:
 
 ### `Challenges`
 
--
+- Finding creditable API/Datasets for Covid-19 information
+- Styling
+- Finding an API that contained testing sites for each state
+- React.js syntax
+- Transfering API data in a chart and making it dynamic
+- An API depreciated the week before we presented this project,
+  causing us to drop an entire component
 
+
+### `Wins`
+- We were able to connect multiple APIs in a single component(CovidData Component)
+- Made the chart dynamic, State Name, 14(+test) information changes with state selection from the drop down box
+- Created a responsive site using CSS grid
+- Team work and Collaboration
 
 
 
