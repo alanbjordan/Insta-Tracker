@@ -1,20 +1,25 @@
 ## Project Title
-1nstaTr9cker
+[1nstaTr9cker]()
 
 ## Video
 - Place Holder
 
+
 ## Authors
  
-  - Jamario Davis
-  - Victor Gamble
-  - Alan Jordan
-  - Maalik McBurrows
+  - Jamario Davis => [GitHub](https://github.com/jamariod) - [Portfolio](https://jamarioadavis.netlify.app/)
+  - Victor Gamble => [GitHub](https://github.com/VictorGamble) - [Portfolio](https://victorgamble.github.io/)
+  - Alan Jordan => [GitHub](https://github.com/alanbjordan) - [Portfolio]()
+  - Maalik McBurrows => [GitHub](https://github.com/maalik-mcburrows) - [Portfolio]()
 
-### `Application Stack`
-  - Front-End => React.js
-  - Back-End => Express.js/Node.js
-  - Database => PostgreSQL
+### `Built With`
+  - Front-End => [React.js](https://reactjs.org/)
+  - Back-End => [Express.js](https://expressjs.com/)/[Node.js](https://nodejs.org/en/)
+  - Database => [PostgreSQL](https://www.postgresql.org/)
+  - Frameworks => [Bootstrap](https://getbootstrap.com/), [Semantic UI](https://semantic-ui.com/)
+  - Map => [John Hopkins](https://coronavirus.jhu.edu/us-map)
+  
+
 
 ## Project Scope
 
@@ -53,6 +58,3 @@ This application includes:
 
 
 
-### `Instructions to run the application`
- - Npm i
- - Npm Start
