@@ -126,24 +126,41 @@
 
   .youtubevm {
     padding: px;
-    margin-top: 10px;
+    margin-top: 0px;
     margin: 5px;
     width: 100%;
     height: 35%;
     overflow-y: scroll;
     background-color: rgb(72, 72, 72);
     border-radius: 8px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
   }
 
   .countryTable {
     overflow-y: scroll;
+    
   }
 
 .cdcyttext {
-  /* background-color: rgb(215, 213, 213); */
-  color: white;
-  border-radius: 10px;
-  width: 99%;
+  /* margin-top: 10px; */
+  margin-top: 18px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+  margin-right: -5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(41, 41, 41);
+  border-bottom-width: 0px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 25px;
+  background-color: rgb(72, 72, 72);
+}
+
+#twitterFeed {
+  overflow: hidden;
 }
 
 .newsImage {
