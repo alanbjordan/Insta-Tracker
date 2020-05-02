@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Component.css';
 
 let apiKey;
 let playlistIdKey;

@@ -137,6 +137,10 @@
     border-top-right-radius: 0px;
   }
 
+  .youtube {
+    margin-bottom: 5px;
+  }
+
   .countryTable {
     overflow-y: scroll;
     
@@ -161,6 +165,7 @@
 
 #twitterFeed {
   overflow: hidden;
+  height: auto;
 }
 
 .newsImage {
