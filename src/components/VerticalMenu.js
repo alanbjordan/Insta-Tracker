@@ -8,14 +8,12 @@ function VerticalMenu() {
 
     return (
         <div id="vertmenu">
-            <div className='cdcyttext'><h1>CDC Video Updates</h1></div>
-            <div className='youtubevm'>
-                <Youtube />
-            </div> <hr />
-            <div className='cdcyttext'><h1>CDC Twitter Updates</h1></div>
             <div className='twittervm'>
                 <Twitter />
             </div>
+            <div className='youtubevm'>
+                <Youtube />
+            </div> <hr />
         </div>
     )
 }

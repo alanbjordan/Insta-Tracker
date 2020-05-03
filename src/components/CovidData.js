@@ -88,12 +88,23 @@ class CovidData extends Component {
         }, this.getStateData);
     }    
 
+    checkState = async () => {
+        console.log("the state history", this.state.stateHistory)        
+        if (this.state.stateHistory !== null) {
+            console.log("No Data!!!")
+        } else {
+            console.log("Data is in")
+        }
+    }
+
     async componentDidMount() {
         this.getTheStates();
         this.getCountryData();
         this.getChartData();
         this.getStateHistory();
         this.getStateData();
+        this.checkState();
+
     }
 
     render() {
@@ -344,18 +355,17 @@ class CovidData extends Component {
         const matchingState = [];
         stateAbb.map(element => {
             if (upperTheState === element.abbreviation) {
-                console.log(element.name)
                 matchingState.push(element.name);
             }}
         )
-        console.log('matched state =>', matchingState);
         const stateDateArray = [];    
         const statePosArray = [];
             if (this.state.stateHistory !== undefined) {
             for (let i = 0; i < 768; i++) {
                 if (lcState === this.state.stateHistory[i].state.toLowerCase()) {
                     const stateDate = this.state.stateHistory[i].date;
-                    const statePos = this.state.stateHistory[i].positive;
+                    const statePos = this.state.stateHistory[i].hospitalizedCurrently;
+
                     stateDateArray.push(stateDate);
                     statePosArray.push(statePos)
                 }
@@ -363,7 +373,6 @@ class CovidData extends Component {
         }
 
         const newData = [{name: stateDateArray[13], uv: statePosArray[13], pv: 2400, amt: 2400}, {name: stateDateArray[12], uv: statePosArray[12], pv: 2400, amt: 2400}, {name: stateDateArray[11], uv: statePosArray[11], pv: 2400, amt: 2400}, {name: stateDateArray[10], uv: statePosArray[10], pv: 2400, amt: 2400},{name: stateDateArray[9], uv: statePosArray[9], pv: 2400, amt: 2400}, {name: stateDateArray[8], uv: statePosArray[8], pv: 2400, amt: 2400}, {name: stateDateArray[7], uv: statePosArray[7], pv: 2400, amt: 2400}, {name: stateDateArray[6], uv: statePosArray[6], pv: 2400, amt: 2400}, {name: stateDateArray[5], uv: statePosArray[5], pv: 2400, amt: 2400}, {name: stateDateArray[4], uv: statePosArray[4], pv: 2400, amt: 2400}, {name: stateDateArray[3], uv: statePosArray[3], pv: 2400, amt: 2400}, {name: stateDateArray[2], uv: statePosArray[2], pv: 2400, amt: 2400}, {name: stateDateArray[1], uv: statePosArray[1], pv: 2400, amt: 2400}, {name: stateDateArray[0], uv: statePosArray[0], pv: 2400, amt: 2400}];
-
         return (
             <div className="data">
                 <div className='resultsDiv'>
@@ -385,9 +394,7 @@ class CovidData extends Component {
                 </form>
                     <img src={`http://flags.ox3.in/svg/us/${lcState}.svg`} className='flag2' alt='state flag'/>
                     <div>
-                        <h1 className='dp'>{data.positive}</h1><h3 className='results1'>Total Positive Test: </h3>
-                        {/* <h2 className='dp'>{data.death}</h2><h3 className='results1'>Total Deaths: </h3> */}
-                        {/* <h3 className='results1'>Total Test: </h3><h2>{data.total}  </h2>                      */}
+                        <h1 className='dp'>{data.hospitalizedCurrently}</h1><h3 className='results1'>COVID-19 Hospitaliziations: </h3>
                     </div>
                 </div>
                 <hr />

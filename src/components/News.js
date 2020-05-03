@@ -33,7 +33,6 @@ class News extends Component {
   }
 
   render() {
-    console.log(this.state.articles)
     return (
       <div>
         {/* <div className='cdcyttext'><h1>News Updates</h1></div> */}
@@ -45,9 +44,10 @@ class News extends Component {
                     <div className='newsGrid'>
                     <a href={item.url} rel="noopener noreferrer" target='_blank' className='readmore'>
                       <h5 className='text'>{item.title}</h5>  
-                    </a>                    
+                    </a>    
+                    <a href={item.url} target='_blank' >               
                     <img src={item.urlToImage} className='newsImage'/>
-                    {/* <p className='text2'>{item.content}</p> */}
+                    </a>   
                   </div>
                 </div>
               );
