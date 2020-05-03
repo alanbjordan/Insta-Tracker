@@ -376,8 +376,8 @@ class CovidData extends Component {
         return (
             <div className="data">
                 <div className='resultsDiv'>
-                    <img src='https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png' className='flag' alt='state flag'/>
-                    <div className='usa'>
+                    <img src='https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png' className='usFlag' alt='state flag'/>
+                    <div className='usaresults'>
                         <h3 className='results1'>Positive Test: </h3><h2>{countryData.positive}</h2>
                         <h3 className='results1'>Total Deaths: </h3><h2>{countryData.death}</h2>
                         <h3 className='results1'>Total Test: </h3><h2>{countryData.total}  </h2>                     
@@ -385,15 +385,17 @@ class CovidData extends Component {
                 </div>
                 <div className='resultsDiv2'>
                 <h1 className='stateName'>{matchingState[0]}</h1>
-                <form  value={this.state.theState} onChange={this.handleChange}>
-                    <label> Select State <br></br>
-                    <select className="ui compact menu">
-                        {stateData.map((state) => <option  className="dropdown icon" key={state.state} value={state.state}>{state.state}</option>)}
-                    </select> 
-                    </label> 
-                </form>
+                <div className='stateSelector'>
+                    <form className='stateSelector' value={this.state.theState} onChange={this.handleChange}>
+                        <label> Select State <br></br>
+                        <select className="ui compact menu">
+                            {stateData.map((state) => <option  className="dropdown icon" key={state.state} value={state.state}>{state.state}</option>)}
+                        </select> 
+                        </label> 
+                    </form>
+                </div>
                     <img src={`http://flags.ox3.in/svg/us/${lcState}.svg`} className='flag2' alt='state flag'/>
-                    <div>
+                    <div className='hospitalData'>
                         <h1 className='dp'>{data.hospitalizedCurrently}</h1><h3 className='results1'>COVID-19 Hospitaliziations: </h3>
                     </div>
                 </div>
