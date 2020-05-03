@@ -1,9 +1,11 @@
 #vertmenu {
   margin: 2px;
-    width: 100%;
-    height: 100vh;
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 2;
+  margin-left: 15px;
+  padding-right: 20px;
+  width: 100%;
+  height: 100vh;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
 }
 
 .news {
@@ -148,7 +150,7 @@
 
 .cdcyttext {
   /* margin-top: 10px; */
-  margin-top: 18px;
+  margin-top: 20px;
   margin-bottom: 0px;
   margin-left: 5px;
   margin-right: -5px;

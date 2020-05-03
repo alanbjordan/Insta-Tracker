@@ -4,8 +4,9 @@ import CovidData from './components/CovidData';
 import './App.css';
 import VerticalMenu from './components/VerticalMenu';
 import News from './components/News';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Case from './components/Case';
+import Menu from './components/Menu';
 
 function App() {
   return (
@@ -14,15 +15,7 @@ function App() {
         <Switch>
           <main>
             <div>
-              <Link to={"/"} >
-                Home
-              </Link>
-              <Link to={"/case"} >
-                Report a Case
-              </Link>
-            </div>
-            
-            <div>
+               <Menu />
               <div className="wrapper" > 
                   <Route exact path="/" component={VerticalMenu}/>
                   <Route exact path="/" component={Map} />
