@@ -16,6 +16,7 @@ class Twitter extends Component {
                 noFooter
                 theme='dark'
                 transparent
+                noBorders
             />
         )
     }
