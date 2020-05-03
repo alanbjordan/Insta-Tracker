@@ -15,8 +15,8 @@ function Menu() {
               </Link>
             </div>
             <div className="menuItem" style={{fontStyle:"initial"}}>
-              <Link to={"/case"} className="menuLinks">
-                Report a Case
+              <Link to={"/case"} className="menuLinks" id="caseLink">
+                Report Case
               </Link>
             </div>
           </div>

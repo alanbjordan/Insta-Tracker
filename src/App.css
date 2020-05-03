@@ -76,6 +76,12 @@ hr {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+#caseLink {
+  font-style: initial;
+  font-family: sans-serif;
+  text-shadow: none;
+}
+
 .logoInsta {
   float: left;
   padding-left: 15px;
