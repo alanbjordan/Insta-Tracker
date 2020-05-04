@@ -20,7 +20,6 @@
   - Map => [John Hopkins](https://coronavirus.jhu.edu/us-map)
   
 
-
 ## Project Scope
 
 This application is intended to show up to date information on the Covid-19 pandemic in one place.<br/>
@@ -47,14 +46,11 @@ This application includes:
 - An API depreciated the week before we presented this project,
   causing us to drop an entire component
 
-
 ### `Wins`
 - We were able to connect multiple APIs in a single component(CovidData Component)
 - Made the chart dynamic, State Name, 14(+test) information changes with state selection from the drop down box
 - Created a responsive site using CSS grid
 - Made all of the different CSS frameworks work together for a seemless flow to the application
 - Team work and Collaboration
-
-
 
 
