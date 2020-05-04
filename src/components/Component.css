@@ -257,6 +257,9 @@ label {
     border-top-right-radius: 10px;
     background-color: rgb(53, 59, 63);
     width: 100%;
+    border-bottom: solid;
+    border-bottom-width: thin;
+    border-bottom-color: rgb(33,37,41);
 }
 
 .table thead {
