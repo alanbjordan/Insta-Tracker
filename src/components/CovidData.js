@@ -384,7 +384,7 @@ class CovidData extends Component {
                     </div>
                 </div>
                 <div className='resultsDiv2'>
-                <h1 className='stateName'>{matchingState[0]}</h1>
+                <div className='stateNameDiv'><h1 className='stateName'>{matchingState[0]}</h1></div>
                 <div className='stateSelector'>
                     <form className='stateSelector' value={this.state.theState} onChange={this.handleChange}>
                         <label> Select State <br></br>
