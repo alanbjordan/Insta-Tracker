@@ -9,12 +9,15 @@
 }
 
 .youtubevm {
-  margin: 5px;
-  width: auto;
-  overflow-y: auto;
-  height: 1fr;
-  border-radius: 8px;
-  grid-row: 2 / span 1;
+    margin: 5px;
+    width: 100%;
+    overflow-y: auto;
+    border-radius: 8px;
+    margin-top: 0px;
+    margin-right: 0px;
+    color: black;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
 .twittervm {
@@ -45,9 +48,13 @@
 .news {
   height: 225px;
     background-color: rgb(53, 59, 63);
-    border-radius: 8px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     overflow-y: scroll;  
     margin: 20px;
+    margin-top: 0px;
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
     text-align: center;
@@ -228,4 +235,48 @@ label {
   border-radius: 10px;
   border-color: transparent;
 }
+
+.newsTitle {
+    background-color: rgb(53, 59, 63);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+    border-color: transparent;
+    margin-bottom: 0px;
+}
+
+.worldTitle {
+    margin-top: 20px;
+    margin-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(53, 59, 63);
+    width: 100%;
+}
+
+.table thead {
+    border: solid;
+    border-left: solid;
+}
+
+.table tbody {
+  background-color: rgb(53, 59, 63);
+}
+
+.table .thead-dark th {
+  color: #fff;
+  background-color: rgb(33,37,41);
+  border-color: #454d55;
+}
+
+
+
+
+
+
 

@@ -36,7 +36,9 @@ class News extends Component {
     return (
       <div>
         {/* <div className='cdcyttext'><h1>News Updates</h1></div> */}
-        <div className='news'>          
+                  <h1 className="newsTitle">News</h1>          
+
+        <div className='news'>
             {this.state.articles.map((item, index) => {                 
               return (
                 <div className='container' key={index}>

@@ -13,11 +13,14 @@ function VerticalMenu() {
                 <h1 style={{marginTop: "10px", marginBottom: "10px"}}>CDC Twitter</h1>
                 <Twitter />
             </div>
-            <h1>World Cases</h1>
+            <div>
+                <h1 className="worldTitle">World Cases</h1>
+            </div>
             <div className='youtubevm'>
+            
                 {/* <Youtube /> */}
                 <CountryTable />
-            </div> <hr />
+            </div> 
         </div>
     )
 }
