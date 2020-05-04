@@ -13,11 +13,9 @@ function VerticalMenu() {
                 <h1 style={{marginTop: "10px", marginBottom: "10px"}}>CDC Twitter</h1>
                 <Twitter />
             </div>
+            <h1>World Cases</h1>
             <div className='youtubevm'>
                 {/* <Youtube /> */}
-                <div>
-                    <h1>World Cases</h1>
-                </div>
                 <CountryTable />
             </div> <hr />
         </div>
