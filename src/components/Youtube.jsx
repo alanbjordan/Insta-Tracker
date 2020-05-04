@@ -35,7 +35,7 @@ class Youtube extends Component {
             <div>   
                 <div className="youtube">
                     {ytResults.map((link, i) => {
-                            var frame = <div key={i}><iframe title= "iframe" width="360" height="315" src={link} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe><hr /><hr /></div>
+                            var frame = <div key={i}><iframe title= "iframe" width="400" height="270" src={link} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe><hr /><hr /></div>
                             return frame;
                         })}
                     {this.frame}               

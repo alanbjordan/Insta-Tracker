@@ -44,9 +44,9 @@ class CountryTable extends Component {
             </thead>
             <tbody>
                 <tr>
-                    <td>{data.map(country => <tr>{country.country}</tr>)}</td>
-                    <td>{data.map(country => <tr>{country.cases}</tr>)}</td>
-                    <td>{data.map(country => <tr>{country.recovered}</tr>)}</td>
+                    <td>{data.map(country => <tr className='tableText'>{country.country}</tr>)}</td>
+                    <td>{data.map(country => <tr className='tableText'>{country.cases}</tr>)}</td>
+                    <td>{data.map(country => <tr className='tableText'>{country.recovered}</tr>)}</td>
                 </tr>
             </tbody>
             </table>

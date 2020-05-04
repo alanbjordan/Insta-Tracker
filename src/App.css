@@ -1,31 +1,28 @@
 .App {
   text-align: center;
-  background-color: rgb(41, 41, 41);
+  background-color: rgb(33,37,41);
   color: white;
 }
 
 body {
-  background-color: rgb(41, 41, 41);
+  background-color: rgb(33,37,41);
 }
 
 main {
   margin: auto auto;
-  width: 100vw;
-  /* height: auto; */
   border-radius: 5px;
-  padding: 5px;
-  background-color: rgb(41, 41, 41);
+  padding: 60px;
+  background-color: rgb(33,37,41);
 }
 
 .wrapper {
-  margin-top: 50px;
+  margin-top: 10px;
   display: grid;
-  grid-template-columns: 1fr 5fr 2fr;
-  grid-template-rows: 3fr 1fr;
-  grid-column-gap: 5px;
-  background-color: rgb(41, 41, 41);
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-column-gap: 60px;
+  background-color: rgb(33,37,41);
   height: 94%;
-  width: 100%;
   border-radius: 5px;
 }
 
