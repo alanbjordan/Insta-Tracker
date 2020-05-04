@@ -3,6 +3,7 @@ import '../App.css';
 import './Component.css';
 import Youtube from './Youtube';
 import Twitter from './Twitter';
+import CountryTable from './CountryTable';
 
 function VerticalMenu() {
 
@@ -12,7 +13,8 @@ function VerticalMenu() {
                 <Twitter />
             </div>
             <div className='youtubevm'>
-                <Youtube />
+                {/* <Youtube /> */}
+                <CountryTable />
             </div> <hr />
         </div>
     )

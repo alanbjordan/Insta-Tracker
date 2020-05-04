@@ -20,7 +20,7 @@
 .twittervm {
   margin: 5px;
   width: 100%;
-  background-color: rgb(72, 72, 72);
+  background-color: rgb(53, 59, 63);
   border-radius: 8px;
   grid-row: 1 / span 1;
   height: 1fr;
@@ -39,12 +39,12 @@
   grid-column: 2 / span 1;
   text-align: center;
   border-radius: 5px;
-  border: solid 2px rgb(72, 72, 72);
+  border: solid 2px rgb(53, 59, 63);
 }
 
 .news {
   height: 225px;
-    background-color: rgb(72, 72, 72);
+    background-color: rgb(53, 59, 63);
     border-radius: 8px;
     overflow-y: scroll;  
     margin: 20px;
@@ -138,7 +138,7 @@ a:link, a:visited {
   grid-row: 1 / span 1;
   margin-top: 20px;
   padding: 8px;
-  background-color: rgb(72, 72, 72);
+  background-color: rgb(53, 59, 63);
   border-radius: 8px;
   height: auto;
 
@@ -148,7 +148,7 @@ a:link, a:visited {
 .resultsDiv2 {
   margin: 10px 0px 10px 0px ;
   grid-row: 2 / span 1;
-  background-color: rgb(72, 72, 72);
+  background-color: rgb(53, 59, 63);
   border-radius: 8px;
   height: auto;
   display: grid;
@@ -164,7 +164,7 @@ a:link, a:visited {
   grid-row: 3 / span 1;
   width: 100%;
   height: auto;
-  background-color: rgb(72, 72, 72);
+  background-color: rgb(53, 59, 63);
   border-radius: 8px;
 }
 
@@ -203,3 +203,6 @@ label {
   background-color: white;
 }
 
+.tableText {
+  color: white;
+}

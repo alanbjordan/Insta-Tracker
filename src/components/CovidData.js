@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../App.css';
 import './Component.css';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 import CountryTable from './CountryTable';
 
 class CovidData extends Component {
@@ -365,7 +365,6 @@ class CovidData extends Component {
                 if (lcState === this.state.stateHistory[i].state.toLowerCase()) {
                     const stateDate = this.state.stateHistory[i].date;
                     const statePos = this.state.stateHistory[i].hospitalizedCurrently;
-
                     stateDateArray.push(stateDate);
                     statePosArray.push(statePos)
                 }
@@ -403,9 +402,10 @@ class CovidData extends Component {
                 <div className='lineChart'>
                     <h1>{matchingState[0]}: 14 Day Historical(+ Test)</h1>
                     <LineChart width={500} height={200} data={newData}>
-                        <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+                        <Line type="monotone" dataKey="uv" stroke="#ff0000"  activeDot={{ r: 8 }} />
                         <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
                         <XAxis dataKey="name" />
+                        <Tooltip/>
                         <YAxis />
                     </LineChart>
                 </div>
