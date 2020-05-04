@@ -9,12 +9,15 @@ function VerticalMenu() {
 
     return (
         <div id="vertmenu">
-            <div className='cdcyttext'><h1>CDC Twitter Updates</h1></div>
-            <div className='youtubevm' id="twitterFeed">
+            <div className='twittervm'>
+                <h1 style={{marginTop: "10px", marginBottom: "10px"}}>CDC Twitter</h1>
                 <Twitter />
             </div>
             <div className='youtubevm'>
                 {/* <Youtube /> */}
+                <div>
+                    <h1>World Cases</h1>
+                </div>
                 <CountryTable />
             </div> <hr />
         </div>
@@ -23,19 +26,3 @@ function VerticalMenu() {
 
 export default VerticalMenu;
 
-{/* <div id="vertmenu">
-            <div><h1>CDC Video Updates</h1></div>
-            <div className='cdcyttext'>
-                    CDC Video Updates
-                </div>
-            <div className='youtubevm'>
-                
-                <div>
-                    <Youtube />
-                </div>
-            </div> <hr />
-            <div className='cdcyttext'><h1>CDC Twitter Updates</h1></div>
-            <div className='youtubevm' id="twitterFeed">
-                <Twitter />
-            </div>
-        </div> */}
