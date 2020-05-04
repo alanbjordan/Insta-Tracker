@@ -377,8 +377,8 @@ class CovidData extends Component {
                 <div className='resultsDiv'>
                     <img src='https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png' className='usFlag' alt='state flag'/>
                     <div className='usaresults'>
-                        <h3 className='results1'>Positive Test: </h3><h2>{countryData.positive}</h2>
-                        <h3 className='results1'>Total Deaths: </h3><h2>{countryData.death}</h2>
+                        <h3 className='results1'>Positive Test: </h3><h2 style={{marginBottom: "15px"}}>{countryData.positive}</h2>
+                        <h3 className='results1'>Total Deaths: </h3><h2 style={{marginBottom: "15px"}}>{countryData.death}</h2>
                         <h3 className='results1'>Total Test: </h3><h2>{countryData.total}  </h2>                     
                     </div>
                 </div>

@@ -130,6 +130,9 @@ a:link, a:visited {
 
 .usaresults {
   margin-top: 20px;
+  width: 200px;
+  margin: auto;
+  margin-right: 0px;
 }
 
 .resultsDiv {
@@ -205,4 +208,23 @@ label {
 
 .tableText {
   color: white;
+}
+
+.lineChart svg {
+  padding-right: 45px;
+}
+
+.lineChart h1 {
+  padding-top: 20px;
+}
+
+.resultsDiv img {
+  border-radius: 10px;
+  border-color: transparent;
+  margin-left: 50px;
+}
+
+.resultsDiv2 img {
+  border-radius: 10px;
+  border-color: transparent;
 }
