@@ -2,7 +2,7 @@
 1nstaTr9cker
 
 ## Video
-- Place Holder
+![DC-Capstone](https://user-images.githubusercontent.com/24234259/81082417-4541e480-8ec1-11ea-8f8d-45866948e71c.gif)
 
 
 ## Authors
