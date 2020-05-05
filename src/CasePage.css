@@ -14,6 +14,8 @@ div .wrapper div #sidePage {
   
   .case {
     margin: auto;
+    display: inline-block;
+    transform: scale(1.5);
   }
   
   .caseTitle {
@@ -35,7 +37,7 @@ div .wrapper div #sidePage {
   }
   
   .caseInputDiv {
-    margin-right: 10px;
+    margin-right: 0px;
     padding: 10px;
     background-color: rgb(53, 59, 63);
     border-radius: 25px;
@@ -54,6 +56,8 @@ div .wrapper div #sidePage {
   }
   
   .caseInputLabel {
+    width: 200px;
+    margin-right: 10px;
     color: white;
     padding: 10px;
     font-family: impact;
@@ -62,15 +66,14 @@ div .wrapper div #sidePage {
   }
   
   .inputElement {
-    border-radius: 15px;
-    text-align: right;
+    border-radius: 20px;
     font-style: normal;
     font-family: sans-serif;
+    width: -webkit-fill-available;
     color: black;
-    font-size: 10px;
-    cursor: pointer;
+    padding-left: 5px;
   }
-  
+
   .caseInputDiv:hover .inputElement{
     background-color: 	red;
     border-color: red;

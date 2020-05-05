@@ -1,5 +1,5 @@
 ## Project Title
-[1nstaTr9cker]()
+1nstaTr9cker
 
 ## Video
 - Place Holder
@@ -9,8 +9,8 @@
  
   - Jamario Davis => [GitHub](https://github.com/jamariod) - [Portfolio](https://jamarioadavis.netlify.app/)
   - Victor Gamble => [GitHub](https://github.com/VictorGamble) - [Portfolio](https://victorgamble.github.io/)
-  - Alan Jordan => [GitHub](https://github.com/alanbjordan) - [Portfolio]()
-  - Maalik McBurrows => [GitHub](https://github.com/maalik-mcburrows) - [Portfolio]()
+  - Alan Jordan => [GitHub](https://github.com/alanbjordan) - [Portfolio](https://alanjordan.netlify.app/)
+  - Maalik McBurrows => [GitHub](https://github.com/maalik-mcburrows) - [Portfolio](https://maalik-mcburrows.github.io/portfolio-v2/)
 
 ### `Built With`
   - Front-End => [React.js](https://reactjs.org/)
