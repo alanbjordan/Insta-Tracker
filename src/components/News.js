@@ -15,6 +15,7 @@ class News extends Component {
     this.state = {
       id: '',
       articles: [],
+      loading : true
     };
   }
 
@@ -27,12 +28,24 @@ class News extends Component {
       })
       .then((data) => {
         this.setState({
-          articles: data.articles
+          articles: data.articles,
+          loading : false
         });
       });
   }
 
   render() {
+
+    const { loading } = this.state
+    if (loading === true) {
+      return (
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border text-danger" role="status" style={{margin : "auto", width: "3rem", height: "3rem"}}>
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+      )
+    }
     return (
       <div>
         {/* <div className='cdcyttext'><h1>News Updates</h1></div> */}

@@ -4,7 +4,8 @@ import './Component.css';
 
 class CountryTable extends Component {
     state = {
-        data: []
+        data: [],
+        loading : true
     }
 
     loadData = async (url) => {
@@ -24,14 +25,26 @@ class CountryTable extends Component {
         const data =  stateData.map(state => state)
         console.log("Data is =>", data);
         this.setState({
-            data
+            data,
+            loading : false
         })
 
     }
 
 
     render() {
-        const { data } = this.state;
+        const { data, loading } = this.state;
+
+        if (loading === true) {
+            return(
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border text-danger" role="status" style={{margin : "auto", width: "3rem", height: "3rem"}}>
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            )
+        }
+
         return (
         <div className="countryTable">
             <table className="table">
