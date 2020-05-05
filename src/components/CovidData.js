@@ -372,7 +372,7 @@ class CovidData extends Component {
             }
         }
 
-        const newData = [{name: stateDateArray[13], uv: statePosArray[13], pv: 2400, amt: 2400}, {name: stateDateArray[12], uv: statePosArray[12], pv: 2400, amt: 2400}, {name: stateDateArray[11], uv: statePosArray[11], pv: 2400, amt: 2400}, {name: stateDateArray[10], uv: statePosArray[10], pv: 2400, amt: 2400},{name: stateDateArray[9], uv: statePosArray[9], pv: 2400, amt: 2400}, {name: stateDateArray[8], uv: statePosArray[8], pv: 2400, amt: 2400}, {name: stateDateArray[7], uv: statePosArray[7], pv: 2400, amt: 2400}, {name: stateDateArray[6], uv: statePosArray[6], pv: 2400, amt: 2400}, {name: stateDateArray[5], uv: statePosArray[5], pv: 2400, amt: 2400}, {name: stateDateArray[4], uv: statePosArray[4], pv: 2400, amt: 2400}, {name: stateDateArray[3], uv: statePosArray[3], pv: 2400, amt: 2400}, {name: stateDateArray[2], uv: statePosArray[2], pv: 2400, amt: 2400}, {name: stateDateArray[1], uv: statePosArray[1], pv: 2400, amt: 2400}, {name: stateDateArray[0], uv: statePosArray[0], pv: 2400, amt: 2400}];
+        const newData = [{name: stateDateArray[13], COVID_Patients: statePosArray[13], pv: 2400, amt: 2400}, {name: stateDateArray[12], COVID_Patients: statePosArray[12], pv: 2400, amt: 2400}, {name: stateDateArray[11], COVID_Patients: statePosArray[11], pv: 2400, amt: 2400}, {name: stateDateArray[10], COVID_Patients: statePosArray[10], pv: 2400, amt: 2400},{name: stateDateArray[9], COVID_Patients: statePosArray[9], pv: 2400, amt: 2400}, {name: stateDateArray[8], COVID_Patients: statePosArray[8], pv: 2400, amt: 2400}, {name: stateDateArray[7], COVID_Patients: statePosArray[7], pv: 2400, amt: 2400}, {name: stateDateArray[6], COVID_Patients: statePosArray[6], pv: 2400, amt: 2400}, {name: stateDateArray[5], COVID_Patients: statePosArray[5], pv: 2400, amt: 2400}, {name: stateDateArray[4], COVID_Patients: statePosArray[4], pv: 2400, amt: 2400}, {name: stateDateArray[3], COVID_Patients: statePosArray[3], pv: 2400, amt: 2400}, {name: stateDateArray[2], COVID_Patients: statePosArray[2], pv: 2400, amt: 2400}, {name: stateDateArray[1], COVID_Patients: statePosArray[1], pv: 2400, amt: 2400}, {name: stateDateArray[0], COVID_Patients: statePosArray[0], pv: 2400, amt: 2400}];
         
         const { loading } = this.state
         if (loading === true) {
@@ -413,13 +413,13 @@ class CovidData extends Component {
                 </div>
                 <hr />
                 <div className='lineChart'>
-                    <h1>{matchingState[0]}: 14 Day Historical(+ Test)</h1>
+                    <h1>{matchingState[0]}: 14 Day Hospitaliziations</h1>
                     <LineChart width={500} height={200} data={newData}>
-                        <Line type="monotone" dataKey="uv" stroke="#ff0000"  activeDot={{ r: 8 }} />
+                        <Line type="monotone" dataKey="COVID_Patients" stroke="#ff0000"  activeDot={{ r: 8 }} />
                         <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
-                        <XAxis dataKey="name" />
+                        <XAxis dataKey="name" stroke="#ccc"/>
                         <Tooltip/>
-                        <YAxis />
+                        <YAxis  stroke="#ccc"/>
                     </LineChart>
                 </div>
                 <div>
