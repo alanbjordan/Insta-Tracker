@@ -12,6 +12,7 @@ main {
   margin: auto auto;
   border-radius: 5px;
   padding: 60px;
+  padding-bottom: 0px;
   background-color: rgb(33,37,41);
 }
 
@@ -28,4 +29,76 @@ main {
 
 iframe {
   border-radius: 10px;
+}
+
+/* Changes brought over from develop-v1 */
+
+.youtube iframe{
+  margin-top: 10px;
+  margin-left: 3px;
+}
+
+/* hr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: 0;
+} */
+
+.menu1 {
+  height: 75px;
+  background-color: rgb(53, 59, 63);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: 3px;
+  margin-right: 20px;
+}
+
+.logo {
+  display: flex;
+  width: max-content;
+  height: inherit;
+}
+
+.menuItem {
+  margin: auto;
+  padding-left: 10px;
+  font-family: impact;
+  font-style: italic;
+}
+
+.menuLinks {
+  padding: 20px;
+  font-size: 15px;
+  font-size: 20px;
+  padding-bottom: 0px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#caseLink {
+  font-style: initial;
+  font-family: sans-serif;
+  text-shadow: none;
+  font-size: 15px;
+}
+
+.logoInsta {
+  float: left;
+  padding-left: 15px;
+}
+
+.logoTracker {
+  padding-left: 5px;
+  padding-bottom: 2px;
+}
+
+.logo a:hover {
+  color: rgb(41, 41, 41);
+  text-decoration: none;
+  text-shadow: none;
+}
+
+a:link, a:visited {
+  color: white;
+  text-decoration: none;
 }
