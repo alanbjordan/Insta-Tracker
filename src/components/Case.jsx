@@ -12,7 +12,8 @@ class Case extends Component {
         testing_site: [],
         redirect: null,
         caseSubmit : false,
-        loading : false
+        loading : false,
+        error : false
     }
 
     handleChange = (event) => {
@@ -58,7 +59,8 @@ class Case extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.setState({
-            loading : true
+            loading : true,
+            error : false
         })
         const data = this.state
         console.log(data);
@@ -77,7 +79,14 @@ class Case extends Component {
             
             console.log(response);
         }}) 
-        .catch(e => console.log(e))        
+        .catch(e => {
+            this.setState({
+                error : true,
+                loading : false
+            })
+
+            console.log(e)
+        })        
     }
 
     render() {
@@ -87,7 +96,50 @@ class Case extends Component {
         'Montana' , 'Nebraska' , 'Nevada' , 'New-Hampshire' , 'New-Jersey' , 'New-Mexico' , 'New-York' , 'North-Carolina' , 'North-Dakota' , 'Ohio', 'Oklahoma' , 'Oregon' , 'Pennsylvania', 'South-Carolina', 
         'Tennessee' , 'Texas' , 'Utah' , 'Vermont' , 'Virginia' , 'Washington' , 'West-Virginia' , 'Wisconsin' , 'Wyoming' ]
 
-        const { test_date, testing_site, site_name, caseSubmit, loading } = this.state
+        const { test_date, testing_site, site_name, caseSubmit, loading, error } = this.state
+
+        if  (error === true) {
+            return(
+                <div className="case">
+                    <div className="caseTitle">
+                        <h1>Have you tested positive for <span className="spanTags">COVID-19</span>? Please file an <span className="spanTags" >anonymous</span> case report below.</h1>
+                    </div>
+                    <form className="caseForm" onSubmit={this.handleSubmit}>
+                        <div className="caseInputLabel">TEST DATE : 
+                            <div className="caseInputDiv">
+                                <input className="inputElement"  style={{ borderRadius: "20px", textAlign: "center", paddingLeft:"25px", fontStyle: "normal", fontFamily: "sans-serif", color: "black" }} type="date" name="test_date" value={test_date} onChange={this.handleChange}/>
+                            </div>
+                        </div>
+                        <div className="caseInputLabel">STATE :
+                            <div className="caseInputDiv">
+                                {/* <input placeholder="State" style={{borderRadius: "10px", textAlign: "center"}} type="text" name="state" value={state} onChange={this.handleChange} /> */}
+                                <select className="inputElement"  style={{borderRadius: "20px", padding: "2.5px"}} onChange={this.stateHandleChange}>
+                                    {stateOptions.map((stateOption, index) => (
+                                        <option key={index} value={stateOption} name="state" >{stateOption}</option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <p style={{visibility: "hidden", width: "0px"}} value={site_name} name="site_name">{site_name}</p>
+                        </div>
+                        <div className="caseInputLabel">TEST SITE :
+                            <div className="caseInputDiv">
+                                <select className="inputElement" style={{borderRadius: "20px", textAlign: "center", padding: "2.5px"}} onChange={this.onSiteChange}>
+                                    {testing_site.map((site, index) => (
+                                        <option key={index} name="testing_site" value={site} >{site}</option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
+                        <div id="caseButtDiv" className="caseInputDiv">
+                            <button className="caseInputButt" type="submit"> <b>SUBMIT</b> </button>
+                        </div>
+                    </form> 
+                    <br></br><b style={{color : "red"}}>There was an error, please try again</b> 
+                </div>
+            )
+        }
 
         if (loading === true) {
             return (
