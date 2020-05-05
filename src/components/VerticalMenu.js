@@ -14,7 +14,7 @@ function VerticalMenu() {
                 <Twitter />
             </div>
             <div>
-                <h1 className="worldTitle">World Cases</h1>
+                <h1 style={{marginTop: "15px"}} className="worldTitle">World Cases</h1>
             </div>
             <div className='youtubevm'>
             

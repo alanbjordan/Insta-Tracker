@@ -98,13 +98,13 @@ class Case extends Component {
                     <form className="caseForm" onSubmit={this.handleSubmit}>
                         <div className="caseInputLabel">TEST DATE : 
                             <div className="caseInputDiv">
-                                <input className="inputElement"  style={{ borderRadius: "15px", textAlign: "right", fontStyle: "normal", fontFamily: "sans-serif", color: "black" }} type="date" name="test_date" value={test_date} onChange={this.handleChange}/>
+                                <input className="inputElement"  style={{ borderRadius: "20px", textAlign: "center", paddingLeft:"35px", fontStyle: "normal", fontFamily: "sans-serif", color: "black" }} type="date" name="test_date" value={test_date} onChange={this.handleChange}/>
                             </div>
                         </div>
                         <div className="caseInputLabel">STATE :
                             <div className="caseInputDiv">
                                 {/* <input placeholder="State" style={{borderRadius: "10px", textAlign: "center"}} type="text" name="state" value={state} onChange={this.handleChange} /> */}
-                                <select className="inputElement"  style={{borderRadius: "10px", textAlign: "center", padding: "2.5px"}} onChange={this.stateHandleChange}>
+                                <select className="inputElement"  style={{borderRadius: "20px", padding: "2.5px"}} onChange={this.stateHandleChange}>
                                     {stateOptions.map((stateOption, index) => (
                                         <option key={index} value={stateOption} name="state" >{stateOption}</option>
                                     ))}
@@ -116,7 +116,7 @@ class Case extends Component {
                         </div>
                         <div className="caseInputLabel">TEST SITE :
                             <div className="caseInputDiv">
-                                <select className="inputElement" style={{borderRadius: "10px", textAlign: "center", padding: "2.5px"}} onChange={this.onSiteChange}>
+                                <select className="inputElement" style={{borderRadius: "20px", textAlign: "center", padding: "2.5px"}} onChange={this.onSiteChange}>
                                     {testing_site.map((site, index) => (
                                         <option key={index} name="testing_site" value={site} >{site}</option>
                                     ))}

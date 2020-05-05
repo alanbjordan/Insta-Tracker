@@ -395,7 +395,7 @@ class CovidData extends Component {
                 </div>
                     <img src={`http://flags.ox3.in/svg/us/${lcState}.svg`} className='flag2' alt='state flag'/>
                     <div className='hospitalData'>
-                        <h1 className='dp'>{data.hospitalizedCurrently}</h1><h3 className='results1'>COVID-19 Hospitaliziations: </h3>
+                        <h3 className='results1'>COVID-19<br></br> Hospitaliziations: </h3><h1 className='dp'>{data.hospitalizedCurrently}</h1>
                     </div>
                 </div>
                 <hr />
