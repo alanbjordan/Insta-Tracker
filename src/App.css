@@ -12,6 +12,7 @@ main {
   margin: auto auto;
   border-radius: 5px;
   padding: 60px;
+  padding-top: 0px;
   padding-bottom: 0px;
   background-color: rgb(33,37,41);
 }
@@ -36,6 +37,14 @@ iframe {
 .youtube iframe{
   margin-top: 10px;
   margin-left: 3px;
+  margin-right: 20px;
+}
+
+.youtube {
+  display: flex;
+  overflow: auto;
+  width: 99%;
+  border-radius: 10px;
 }
 
 /* hr {

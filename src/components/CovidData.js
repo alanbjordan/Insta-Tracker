@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import '../App.css';
 import './Component.css';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
-import CountryTable from './CountryTable';
 
 class CovidData extends Component {
     state = {
@@ -12,6 +11,7 @@ class CovidData extends Component {
         stateData: [],
         countryData: [],
         theState: "ak",
+        loading : true
     }
 
     loadData = async (url) => {
@@ -63,6 +63,7 @@ class CovidData extends Component {
         const stateData = await this.loadData(url);
         return this.setState({
             data: stateData[0],
+            loading : false
         })
     }
 
@@ -372,6 +373,18 @@ class CovidData extends Component {
         }
 
         const newData = [{name: stateDateArray[13], uv: statePosArray[13], pv: 2400, amt: 2400}, {name: stateDateArray[12], uv: statePosArray[12], pv: 2400, amt: 2400}, {name: stateDateArray[11], uv: statePosArray[11], pv: 2400, amt: 2400}, {name: stateDateArray[10], uv: statePosArray[10], pv: 2400, amt: 2400},{name: stateDateArray[9], uv: statePosArray[9], pv: 2400, amt: 2400}, {name: stateDateArray[8], uv: statePosArray[8], pv: 2400, amt: 2400}, {name: stateDateArray[7], uv: statePosArray[7], pv: 2400, amt: 2400}, {name: stateDateArray[6], uv: statePosArray[6], pv: 2400, amt: 2400}, {name: stateDateArray[5], uv: statePosArray[5], pv: 2400, amt: 2400}, {name: stateDateArray[4], uv: statePosArray[4], pv: 2400, amt: 2400}, {name: stateDateArray[3], uv: statePosArray[3], pv: 2400, amt: 2400}, {name: stateDateArray[2], uv: statePosArray[2], pv: 2400, amt: 2400}, {name: stateDateArray[1], uv: statePosArray[1], pv: 2400, amt: 2400}, {name: stateDateArray[0], uv: statePosArray[0], pv: 2400, amt: 2400}];
+        
+        const { loading } = this.state
+        if (loading === true) {
+            return (
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border text-danger" role="status" style={{margin : "auto", width: "3rem", height: "3rem"}}>
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+          )
+        }
+
         return (
             <div className="data">
                 <div className='resultsDiv'>

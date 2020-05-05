@@ -7,6 +7,7 @@ import Menu from './components/Menu';
 import News from './components/News';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Case from './components/Case';
+import Youtube from './components/Youtube';
 
 function App() {
   return (
@@ -21,10 +22,14 @@ function App() {
                 <Route exact path="/" component={VerticalMenu}/>
                 <Route exact path="/" component={Map} />
                 <Route exact path="/" component={CovidData} />
+                
                 <>
                   <Route exact path="/" component={News} />
                 </>
                 </div>
+                <>
+                  <Route exact path="/" component={Youtube} />
+                </>
             <div className="classRouterDiv" >
                     <Route id="sidePage" path="/case" component={Case} />
             </div>
