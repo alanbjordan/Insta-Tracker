@@ -18,6 +18,7 @@ function Menu() {
               <Link to={"/case"} className="menuLinks" id="caseLink">
                 Report Case
               </Link>
+              {/* <div>Covid-19 Instant Data Tracker</div> */}
             </div>
           </div>
         </div>
