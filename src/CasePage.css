@@ -1,0 +1,105 @@
+/* ---------------------------------  ALL STYLES FOR THE CASE COMPONENT ARE BELOW ------------------------------------------ */
+
+div .wrapper div #sidePage {
+  display: inline-flex;
+}
+
+.classRouterDiv {
+  margin-top: 30vh;
+}
+
+#sidePage {
+    display: inline-flex;
+  }
+  
+  .case {
+    margin: auto;
+  }
+  
+  .caseTitle {
+    width: 420px;
+    font-family: impact;
+    font-style: italic;
+    font-variant: small-caps;
+    color: white;
+    padding: 25px;
+    background-color: rgb(53, 59, 63);
+    margin: auto;
+    margin-bottom: 25px;
+    border-radius: 15px;
+  }
+  
+  .caseForm {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .caseInputDiv {
+    margin-right: 10px;
+    padding: 10px;
+    background-color: rgb(53, 59, 63);
+    border-radius: 25px;
+    margin-top: 5px;
+    display: block;
+  }
+  
+  #caseButtDiv {
+    margin-top: 25px;
+  }
+  
+  .caseInputButt {
+    background-color: red;
+    border-radius: 10px;
+    border-color: red;
+  }
+  
+  .caseInputLabel {
+    color: white;
+    padding: 10px;
+    font-family: impact;
+    font-style: italic;
+    font-size: 13px;
+  }
+  
+  .inputElement {
+    border-radius: 15px;
+    text-align: right;
+    font-style: normal;
+    font-family: sans-serif;
+    color: black;
+    font-size: 10px;
+    cursor: pointer;
+  }
+  
+  .caseInputDiv:hover .inputElement{
+    background-color: 	red;
+    border-color: red;
+  }
+  
+  #caseButtDiv:hover .caseInputButt{
+    background-color: white;
+    border-color:  white;
+    color : red;
+  }
+  
+  .spanTags {
+    color : red;
+    box-shadow: black;
+  }
+  
+  .formSuccess{
+    margin: auto;
+    background-color: rgb(53, 59, 63);
+    width: 75vw;
+    padding: 25px;
+    font-family: impact;
+    font-style: italic;
+    color: white;
+    font-size: 35px;
+    font-variant: small-caps;
+    border-radius: 15px;
+  }
+
+  #caseLink:hover {
+    color: red;
+  }
