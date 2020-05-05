@@ -1,7 +1,7 @@
 ## Project Title
 1nstaTr9cker
 
-## Video
+## Demo
 ![DC-CapstoneA](https://user-images.githubusercontent.com/24234259/81083013-07918b80-8ec2-11ea-9211-29a37a1b3876.gif)
 
 
