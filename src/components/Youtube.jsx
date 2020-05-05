@@ -16,7 +16,8 @@ const cdcURL = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet
 class Youtube extends Component {
 
     state = {
-        ytResults: []
+        ytResults: [],
+        loading : true
     }
 
     componentDidMount = async() => {
@@ -24,13 +25,25 @@ class Youtube extends Component {
         const data = await response.json();
         const ytResults = data.items.map(vid => 'https://www.youtube.com/embed/' + vid.snippet.resourceId.videoId)
         this.setState({
-            ytResults
+            ytResults,
+            loading : false
         })
         return ytResults;
     }
 
     render() {
-        const { ytResults } = this.state
+        const { ytResults, loading } = this.state
+
+        if (loading === true) {
+            return (
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border text-danger" role="status" style={{margin : "auto", width: "3rem", height: "3rem"}}>
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+          )
+        }
+
         return (
             <div>   
                 <div className="youtube">

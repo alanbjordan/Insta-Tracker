@@ -11,7 +11,8 @@ class Case extends Component {
         site_name : 'asite',
         testing_site: [],
         redirect: null,
-        caseSubmit : false
+        caseSubmit : false,
+        loading : false
     }
 
     handleChange = (event) => {
@@ -56,13 +57,17 @@ class Case extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        this.setState({
+            loading : true
+        })
         const data = this.state
         console.log(data);
         const url = 'http://localhost:9000/case';
         axios.post(url,data)
         .then(response => { if (response.status === 200) {
             this.setState({
-                caseSubmit : true
+                caseSubmit : true,
+                loading : false
             })
             setTimeout(() => {
                 this.setState({
@@ -82,7 +87,17 @@ class Case extends Component {
         'Montana' , 'Nebraska' , 'Nevada' , 'New-Hampshire' , 'New-Jersey' , 'New-Mexico' , 'New-York' , 'North-Carolina' , 'North-Dakota' , 'Ohio', 'Oklahoma' , 'Oregon' , 'Pennsylvania', 'South-Carolina', 
         'Tennessee' , 'Texas' , 'Utah' , 'Vermont' , 'Virginia' , 'Washington' , 'West-Virginia' , 'Wisconsin' , 'Wyoming' ]
 
-        const { test_date, testing_site, site_name, caseSubmit } = this.state
+        const { test_date, testing_site, site_name, caseSubmit, loading } = this.state
+
+        if (loading === true) {
+            return (
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border text-danger" role="status" style={{margin : "auto", width: "3rem", height: "3rem"}}>
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+          )
+        }
 
         if (this.state.redirect) {
             return <Redirect to={this.state.redirect} />
@@ -98,7 +113,7 @@ class Case extends Component {
                     <form className="caseForm" onSubmit={this.handleSubmit}>
                         <div className="caseInputLabel">TEST DATE : 
                             <div className="caseInputDiv">
-                                <input className="inputElement"  style={{ borderRadius: "20px", textAlign: "center", paddingLeft:"35px", fontStyle: "normal", fontFamily: "sans-serif", color: "black" }} type="date" name="test_date" value={test_date} onChange={this.handleChange}/>
+                                <input className="inputElement"  style={{ borderRadius: "20px", textAlign: "center", paddingLeft:"25px", fontStyle: "normal", fontFamily: "sans-serif", color: "black" }} type="date" name="test_date" value={test_date} onChange={this.handleChange}/>
                             </div>
                         </div>
                         <div className="caseInputLabel">STATE :

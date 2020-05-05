@@ -167,7 +167,7 @@ a:link, a:visited {
   border-radius: 8px;
   height: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 2fr;
   padding: 8px;
   box-shadow: 2px 2px 2px 1px rgb(58, 58, 58);
@@ -240,6 +240,8 @@ label {
 .resultsDiv2 img {
   border-radius: 10px;
   border-color: transparent;
+  margin: auto;
+  margin-top: 0px;
 }
 
 .newsTitle {
