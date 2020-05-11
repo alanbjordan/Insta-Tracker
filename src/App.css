@@ -89,6 +89,10 @@ iframe {
   font-family: sans-serif;
   text-shadow: none;
   font-size: 15px;
+  border: 1px solid black;
+  padding-bottom: 20px;
+  background-color: rgb(169,30,13);
+  box-shadow: 2px 2px 2px black;
 }
 
 .logoInsta {
