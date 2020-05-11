@@ -123,7 +123,7 @@ class Case extends Component {
                         <div>
                             <p style={{visibility: "hidden", width: "0px"}} value={site_name} name="site_name">{site_name}</p>
                         </div>
-                        <div className="caseInputLabel">TEST SITE :
+                        <div className="caseInputLabel">TEST SITES :
                             <div className="caseInputDiv">
                                 <select className="inputElement" style={{borderRadius: "20px", textAlign: "center", padding: "2.5px"}} onChange={this.onSiteChange}>
                                     {testing_site.map((site, index) => (
@@ -136,7 +136,7 @@ class Case extends Component {
                             <button className="caseInputButt" type="submit"> <b>SUBMIT</b> </button>
                         </div>
                     </form> 
-                    <br></br><b style={{color : "red"}}>There was an error, please try again</b> 
+                    <br></br><b style={{color : "red"}}>Successful Submission</b> 
                 </div>
             )
         }
