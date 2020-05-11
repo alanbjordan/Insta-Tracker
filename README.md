@@ -1,8 +1,8 @@
 ## Project Title
-1nstaTr9cker
+Insta Tracker
 
-## Video
-- Place Holder
+## Demo
+![DC-CapstoneA](https://user-images.githubusercontent.com/24234259/81083013-07918b80-8ec2-11ea-9211-29a37a1b3876.gif)
 
 
 ## Authors
@@ -29,7 +29,7 @@ This application includes:
   - News articles pertaining to the COVID-19 Pandemic
   - Current US totals for Positive Test, Total Deaths, and Total Deaths
   - Each state's, and US territorie's Positive Test, Total Deaths, and Total Deaths current totals
-      - 14 Day Historical Chart Positive Tests
+      - Chart showing each state's patients hospitlized over a 14 day period
   - Current country totals for Positive Tests and Recovered Patients
   - A map of testing sites in US per state
     
